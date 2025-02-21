@@ -1,0 +1,105 @@
+"use client";
+
+import ArrowIcon from '@/assets/arrow-right.svg';
+import cogImage from '@/assets/cog.png';
+import lupulo1Image from '@/assets/lupulo1.png';
+import lupulo2Image from '@/assets/lupulo1.png';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { WhatsAppModal } from '@/components/WhatsAppModal';
+
+export const Hero = () => {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start end', 'end start'],
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
+  // Função para scroll suave até a seção "regiao" com offset de 80px
+  const scrollToRegion = () => {
+    const regionSection = document.getElementById("regiao");
+    if (regionSection) {
+      const headerOffset = 80;
+      const elementPosition = regionSection.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  return (
+    <section
+      ref={heroRef}
+      id="hero"
+      className="relative sm:h-[1080px] md:h-[600px] lg:h-[650px] sm:pt-0 md:pt-5 lg:pt-8 overflow-x-clip"
+    >
+      {/* Gradiente radial no canto superior esquerdo */}
+      <div
+        className="absolute top-0 left-0 pointer-events-none"
+        style={{
+          width: '400px',
+          height: '400px',
+          backgroundImage: 'radial-gradient(circle at top left, #008200 0%, transparent 50%)',
+          zIndex: -1,
+          top: '-85px', // Adicionando o headerOffset de 80px
+          left: '-80px', 
+        }}
+      ></div>
+
+      <div className="container mx-auto">
+        <div className="md:flex relative z-40">
+          <div>
+            <div className="tag">Entrega em Tempo Recorde</div>
+            <h1 className="text-6xl font-bold tracking-tighter mt-8 mb-8 bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text">
+              Disk Chopp Delivery
+            </h1>
+            <p className="text-xl text-[#C28415] tracking-tight mt-6">
+              Leque de produtos de alta qualidade, com chopes premiados e um atendimento sem igual! <br /><br />
+              Darela Chopp Express, há 15 anos no mercado trazendo sabor e alegria para o Sul Catarinense.
+            </p>
+            {/* Botões */}
+            <div className="flex gap-1 sm:pt-4 pt-8 items-center mt-[30px] relative z-50">
+              <WhatsAppModal />
+              <button 
+                onClick={scrollToRegion}
+                className="btn btn-text gap-1 inline-flex whitespace-nowrap hover:text-gray hover:scale-105 transition"
+              >
+                <span>Região de atendimento</span>
+                <ArrowIcon className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+          <div className="relative w-full md:w-[600px] lg:w-1/2 -translate-y-10 md:-translate-y-20 lg:-translate-y-40">
+            <motion.img
+              src={cogImage.src}
+              alt="cogImage"
+              className="absolute sm:static z-30"
+              animate={{ translateY: [-20, 20] }}
+              transition={{ repeat: Infinity, repeatType: 'mirror', duration: 3, ease: 'easeInOut' }}
+            />
+            <motion.img
+              src={lupulo1Image.src}
+              width={280}
+              height={220}
+              alt="Lúpulo Image"
+              className="hidden md:block -top-10 -left-40 md:absolute opacity-60 z-20"
+              style={{ translateY: translateY }}
+            />
+            <motion.img
+              src={lupulo2Image.src}
+              width={500}
+              alt="Lúpulo Image 2"
+              className="hidden md:block absolute top-[400px] left-[300px] rotate-[20deg] opacity-60 z-10"
+              style={{ rotate: 30, translateY: translateY }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
