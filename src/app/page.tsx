@@ -8,7 +8,6 @@ import { Footer } from "@/sections/Footer";
 import { Tabs } from "@/sections/Tabs";
 import { CallToAction } from "@/sections/CallToAction";
 import { Regiao } from "@/sections/Region";
-import  Carrossel  from '@/sections/Carrossel';
 import BotaoFlutuante from "@/components/BotaoFlutuante";
 import { Faq } from "@/sections/FAQ";
 
