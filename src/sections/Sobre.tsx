@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import lupulo1Image from "@/assets/lupulo1.png"
-import lupulo2Image from "@/assets/lupulo1.png"
+import lupulo1Image from "@/assets/lupulo3.png"
+import lupulo2Image from "@/assets/lupulo4.png"
 
 export const Sobre = () => {
 
@@ -31,11 +30,11 @@ const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
         </p>
         
         </div>
-        <div className="relative">
+        <div className="relative w-full md:w-[850px] lg:w-full sm:hiden">
                 <motion.img src={lupulo1Image.src} 
         alt={"lúpulo image"} 
-        height={263} 
-        width={262} 
+        height={300} 
+        width={300} 
         className="hidden md:block absolute -right-36 bottom-10"
         style={{
           translateY,
@@ -44,7 +43,7 @@ const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
                 <motion.img src={lupulo2Image.src} 
         alt={"lúpulo image 2"} 
         height={263} 
-        width={262} 
+        width={263} 
         className="hidden md:block absolute bottom-32 -left-36"
         style={{
           translateY,

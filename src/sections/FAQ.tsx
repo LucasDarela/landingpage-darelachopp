@@ -5,22 +5,42 @@ import { motion } from "framer-motion";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
 
 const faqData = [
-  {
-    question: "Como funciona o aluguel de chopeira?",
-    answer: "O aluguel inclui a chopeira, cilindro de CO2 e suporte técnico. Basta escolher o barril e retirar na loja ou agendar a entrega.",
-  },
-  {
-    question: "Quais são as opções de barris disponíveis?",
-    answer: "Trabalhamos com barris de 30L e 50L das melhores marcas, como Heineken, Amstel, Lohn Bier, entre outros.",
-  },
-  {
-    question: "A entrega do chopp é gratuita?",
-    answer: "Depende da sua localização! Oferecemos entrega gratuita em Criciúma e Tubarão para pedidos acima de determinado valor.",
-  },
-  {
-    question: "Preciso devolver o barril depois do evento?",
-    answer: "Sim! O barril deve ser devolvido em até 48 horas após o evento, salvo exceções combinadas previamente.",
-  },
+    {
+        "question": "Como funciona o aluguel da chopeira?",
+        "answer": "O aluguel inclui a chopeira, cilindro de CO₂ e suporte técnico. Você escolhe o barril e pode retirar na loja ou agendar a entrega."
+      },
+      {
+        "question": "Terei suporte caso aconteça algum problema?",
+        "answer": "Sim! Oferecemos suporte via WhatsApp para ajudá-lo com qualquer dúvida ou problema. Se não for possível resolver remotamente, um técnico irá até o local."
+      },
+      {
+        "question": "O que acontece se faltar chope no meio da festa?",
+        "answer": "No momento do pedido, sempre avaliamos a quantidade de convidados, o tipo e a duração do evento para evitar que falte chope. Caso exista essa possibilidade, costumamos deixar um barril em consignação. Se, ainda assim, o chope acabar, basta entrar em contato com o vendedor para verificar a disponibilidade de entrega imediata."
+      },
+      {
+        "question": "Posso deixar um barril em consignação?",
+        "answer": "Sim! Trabalhamos com consignação de barris. Consulte a disponibilidade da marca e da quantidade desejada com o vendedor no momento do agendamento."
+      },
+      {
+        "question": "Quais são as opções de barris disponíveis?",
+        "answer": "Oferecemos barris de 30L e 50L das melhores marcas, como Heineken, Amstel, Lohn Bier e outras."
+      },
+      {
+        "question": "A entrega do chope é gratuita?",
+        "answer": "Depende da sua localização! Oferecemos entrega gratuita em Criciúma e Tubarão para pedidos acima de um valor mínimo. Consulte as condições com o vendedor."
+      },
+      {
+        "question": "Preciso devolver os equipamentos depois do evento?",
+        "answer": "Sim! Realizamos a coleta nas segundas e terças-feiras. Nossa equipe vai até o local para recolher os equipamentos. Se você retirou a chopeira em nosso depósito, o barril, a chopeira e o cilindro devem ser devolvidos em até 48 horas após o evento, salvo exceções combinadas previamente."
+      },
+      {
+        "question": "Se sobrar chope no meu evento, posso levar para casa?",
+        "answer": "Sim! Mas é necessário avisar pelo WhatsApp ao final do evento e informar a localização onde a chopeira ficará."
+      },
+      {
+        "question": "Quais são as formas de pagamento?",
+        "answer": "Aceitamos dinheiro, PIX e cartão. O pagamento no cartão está sujeito à taxa da operadora e pode ser parcelado em até 3 vezes, com parcela mínima de R$ 300,00."
+      },
 ];
 
 export const Faq = () => {

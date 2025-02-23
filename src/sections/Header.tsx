@@ -97,7 +97,7 @@ export const Header = () => {
 
           {/* Navbar Mobile */}
           <nav className={twMerge(
-            "lg:hidden absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center gap-4 p-6 transition-all duration-300",
+            "lg:hidden absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 p-6 transition-all duration-300",
             isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
           )}>
             <a onClick={() => scrollToSection('sobre')} className="cursor-pointer">Sobre</a>

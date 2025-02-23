@@ -1,118 +1,80 @@
 "use client";
 
-import React, { useState } from "react";
-import pyramidImage from "@/assets/lupulo1.png";
-import tubeImage from "@/assets/lupulo1.png";
+import React, { useRef, useState } from "react";
+import lupulo1Image from "@/assets/lupulo5.png";
+import lupulo2Image from "@/assets/lupulo6.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export const ChoppCalculator = () => {
-  const [people, setPeople] = useState<number>(0);
+  const [people, setPeople] = useState<string>("0");
   const [eventType, setEventType] = useState<string>("churrasco");
-  const [duration, setDuration] = useState<number>(0);
+  const [duration, setDuration] = useState<string>("0");
   const [extras, setExtras] = useState({
     bebidaQuente: false,
     drink: false,
   });
   const [result, setResult] = useState<number | null>(null);
 
-  // Definição das opções de evento com consumo base e duração padrão
   const eventOptions = [
-    {
-      label: "Churrasco",
-      value: "churrasco",
-      baseConsumption: 3, // litros por pessoa para 5 horas
-      baseDuration: 5,
-    },
-    {
-      label: "Aniversário",
-      value: "aniversario",
-      baseConsumption: 3,
-      baseDuration: 5,
-    },
-    {
-      label: "Formatura",
-      value: "formatura",
-      baseConsumption: 3,
-      baseDuration: 5,
-    },
-    {
-      label: "Casamento",
-      value: "casamento",
-      baseConsumption: 3,
-      baseDuration: 5,
-    },
-    {
-      label: "Confraternização Empresa",
-      value: "confraternizacao",
-      baseConsumption: 2,
-      baseDuration: 5,
-    },
-    {
-      label: "Chá de Bebê/Festa Infantil",
-      value: "chadebebe",
-      baseConsumption: 1,
-      baseDuration: 4,
-    },
-    {
-      label: "Outro",
-      value: "outro",
-      baseConsumption: 3,
-      baseDuration: 5,
-    },
+    { label: "Churrasco", value: "churrasco", baseConsumption: 3, baseDuration: 5 },
+    { label: "Aniversário", value: "aniversario", baseConsumption: 3, baseDuration: 5 },
+    { label: "Formatura", value: "formatura", baseConsumption: 3, baseDuration: 5 },
+    { label: "Casamento", value: "casamento", baseConsumption: 3, baseDuration: 5 },
+    { label: "Confraternização Empresa", value: "confraternizacao", baseConsumption: 2, baseDuration: 5 },
+    { label: "Chá de Bebê/Festa Infantil", value: "chadebebe", baseConsumption: 1, baseDuration: 4 },
+    { label: "Outro", value: "outro", baseConsumption: 3, baseDuration: 5 },
   ];
 
-  // Função que calcula o consumo total
   const handleCalculate = (e: React.FormEvent) => {
     e.preventDefault();
     const eventOption = eventOptions.find((opt) => opt.value === eventType);
-    if (!eventOption || people <= 0 || duration <= 0) {
+    const numPeople = Number(people);
+    const numDuration = Number(duration);
+
+    if (!eventOption || numPeople <= 0 || numDuration <= 0) {
       setResult(null);
       return;
     }
-    // Consumo base ajustado à duração informada
-    let consumptionPerPerson =
-      eventOption.baseConsumption * (duration / eventOption.baseDuration);
 
-    // Subtrai extras: 0,5 L para cada item selecionado
-    const extraReduction =
-      (extras.bebidaQuente ? 0.5 : 0) + (extras.drink ? 0.5 : 0);
+    let consumptionPerPerson = eventOption.baseConsumption * (numDuration / eventOption.baseDuration);
+    const extraReduction = (extras.bebidaQuente ? 0.5 : 0) + (extras.drink ? 0.5 : 0);
     consumptionPerPerson = Math.max(0, consumptionPerPerson - extraReduction);
 
-    const totalConsumption = people * consumptionPerPerson;
+    const totalConsumption = numPeople * consumptionPerPerson;
     setResult(totalConsumption);
   };
 
-  // Configuração de animação: usar o progresso do scroll
-  const { scrollYProgress } = useScroll();
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  // **Configuração do efeito parallax**
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY1 = useTransform(scrollYProgress, [0, 1], [100, -100]); // Ajuste para a primeira imagem
+  const translateY2 = useTransform(scrollYProgress, [0, 1], [150, -150]); // Ajuste para a segunda imagem
 
   return (
-    <section className="relative" id="choppcalculator">
+    <section ref={sectionRef} className="relative overflow-hidden" id="choppcalculator">
       <div className="container mx-auto">
         <div className="section-heading section-header">
-          <h2 className="section-title my-12">
-            Calculadora de Chopp para Evento
-          </h2>
+          <h2 className="section-title my-12">Calculadora de Chopp para Evento</h2>
           <p className="section-description">Tenha uma média de quantos litros seus convidados irão consumir</p>
         </div>
         <div className="section-heading">
           <form onSubmit={handleCalculate} className="space-y-4">
             <div>
-              <label className="block font-semibold mb-1">
-                Quantidade de Pessoas:
-              </label>
+              <label className="block font-semibold mb-1">Quantidade de Pessoas:</label>
               <input
                 type="number"
                 value={people}
-                onChange={(e) => setPeople(Number(e.target.value))}
+                onChange={(e) => setPeople(e.target.value)}
                 className="w-full border rounded-2xl p-2 focus:outline-none focus:border-[#008200] focus:ring-2 focus:ring-[#008200]/50"
                 min="0"
               />
             </div>
             <div>
-              <label className="block font-semibold mb-1">
-                Tipo de Evento:
-              </label>
+              <label className="block font-semibold mb-1">Tipo de Evento:</label>
               <select
                 value={eventType}
                 onChange={(e) => setEventType(e.target.value)}
@@ -126,29 +88,23 @@ export const ChoppCalculator = () => {
               </select>
             </div>
             <div>
-              <label className="block font-semibold mb-1">
-                Tempo de Evento (horas):
-              </label>
+              <label className="block font-semibold mb-1">Tempo de Evento (horas):</label>
               <input
                 type="number"
                 value={duration}
-                onChange={(e) => setDuration(Number(e.target.value))}
+                onChange={(e) => setDuration(e.target.value)}
                 className="w-full border rounded-2xl p-2 focus:outline-none focus:border-[#008200] focus:ring-2 focus:ring-[#008200]/50"
                 min="0"
               />
             </div>
             <div>
-              <label className="block font-semibold mb-1">
-                Também vai ter:
-              </label>
+              <label className="block font-semibold mb-1">Também vai ter:</label>
               <div className="flex items-center space-x-4 p-2">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={extras.bebidaQuente}
-                    onChange={(e) =>
-                      setExtras({ ...extras, bebidaQuente: e.target.checked })
-                    }
+                    onChange={(e) => setExtras({ ...extras, bebidaQuente: e.target.checked })}
                     className="mr-1 accent-[#008200]"
                   />
                   Bebida Quente
@@ -157,9 +113,7 @@ export const ChoppCalculator = () => {
                   <input
                     type="checkbox"
                     checked={extras.drink}
-                    onChange={(e) =>
-                      setExtras({ ...extras, drink: e.target.checked })
-                    }
+                    onChange={(e) => setExtras({ ...extras, drink: e.target.checked })}
                     className="mr-1 accent-[#008200]"
                   />
                   Drink
@@ -180,24 +134,26 @@ export const ChoppCalculator = () => {
             </div>
           )}
         </div>
-        {/* <div className="relative">
+
+        {/* **Efeito Parallax nas Imagens** */}
+        <div className="relative w-full md:w-[850px] lg:w-full sm:hiden ">
           <motion.img
-            src={pyramidImage.src}
-            alt="Pyramid"
-            height={230}
-            width={230}
-            className="hidden md:block absolute -right-36 -top-36 rotate-[10deg] opacity-75"
-            style={{ translateY }}
+            src={lupulo1Image.src}
+            alt="Lúpulo Image"
+            height={380}
+            width={380}
+            className="hidden md:block absolute -right-36 bottom-10"
+            style={{ y: translateY1 }} // Correção do efeito parallax
           />
           <motion.img
-            src={tubeImage.src}
-            alt="Tube"
-            height={220}
-            width={220}
-            className="hidden md:block absolute bottom-24 -left-36"
-            style={{ translateY }}
+            src={lupulo2Image.src}
+            alt="Lúpulo Image 2"
+            height={263}
+            width={263}
+            className="hidden md:block absolute bottom-32 -left-36"
+            style={{ y: translateY2 }} // Correção do efeito parallax
           />
-        </div> */}
+        </div>
       </div>
     </section>
   );

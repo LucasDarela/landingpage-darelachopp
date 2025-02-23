@@ -2,49 +2,97 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import HeinekenLogo from "@/assets/logo-heineken.png";
-import AmstelLogo from "@/assets/logo-bk.png";
-import LohnLogo from "@/assets/logo-bk.png";
-import SaintLogo from "@/assets/logo-bk.png";
-import DarelaLogo from "@/assets/logo-bk.png";
-import DarelaArtLogo from "@/assets/logo-bk.png";
+import HeinekenLogo from "@/assets/tab-heineken.png";
+import AmstelLogo from "@/assets/tab-amstel.png";
+import LohnLogo from "@/assets/tab-lohn.png";
+import SaintLogo from "@/assets/tab-saint.png";
+import DarelaLogo from "@/assets/tab-darela.png";
+import DarelaArtLogo from "@/assets/tab-darela.png";
 
 const brands = [
   {
     id: 1,
     name: "Heineken",
     logo: HeinekenLogo,
-    description: "O chopp Heineken é conhecido por seu sabor equilibrado e refrescante, com um teor alcoólico de 5% e IBU de 19, proporcionando uma experiência única aos apreciadores.",
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        Sabor equilibrado e refrescante, ideal para qualquer ocasião. <br /><br />
+        <strong>Tipo:</strong> Pilsen Lager <br />
+        <strong>IBU:</strong> 19 <br />
+        <strong>Vol:</strong> 5% <br /><br />
+        <strong>Sugestão de harmonização:</strong> Combina bem com carnes grelhadas, queijos suaves e petiscos salgados.
+      </div>
+    ),
   },
   {
     id: 2,
     name: "Amstel",
     logo: AmstelLogo,
-    description: "Amstel oferece um chopp leve e suave, com teor alcoólico de 4,6% e IBU de 18, ideal para quem busca uma bebida refrescante e de fácil degustação.",
+    description: (
+      <div className="text-left mx-auto max-w-[400px]">
+        Leve e suave, perfeito para momentos descontraídos. <br /><br />
+        <strong>Tipo:</strong> Pilsen Puro Malte<br />
+        <strong>IBU:</strong> 18 <br />
+        <strong>Vol:</strong> 4,6% <br /><br />
+        <strong>Sugestão de harmonização:</strong> Ideal para acompanhar frutos do mar, saladas e pratos leves.
+      </div>
+    ),
   },
   {
     id: 3,
     name: "Lohn Bier",
     logo: LohnLogo,
-    description: "Lohn Bier apresenta uma variedade de chopps artesanais, destacando-se pelo chopp Pilsen com teor alcoólico de 4,8% e IBU de 12, perfeito para harmonizar com diversos pratos.",
+    description: (
+      <div className="text-left mx-auto max-w-[400px]">
+        Chopp artesanal de qualidade, com sabor marcante e aroma equilibrado. <br /><br />
+        <strong>Tipo:</strong> Pilsen <br />
+        <strong>IBU:</strong> 11 <br />
+        <strong>Vol:</strong> 4,6% <br /><br />
+        <strong>Sugestão de harmonização:</strong> Harmoniza bem com hambúrgueres artesanais, pizzas e carnes assadas.
+      </div>
+    ),
   },
   {
     id: 4,
     name: "Saint Bier",
     logo: SaintLogo,
-    description: "Saint Bier traz o chopp de vinho, uma opção diferenciada com teor alcoólico de 6,5% e IBU de 15, combinando notas frutadas e um sabor marcante.",
+    description: (
+      <div className="text-left mx-auto max-w-[400px]">
+        Opção diferenciada com notas frutadas e um sabor marcante. <br /><br />
+        <strong>Tipo:</strong> Pilsen <br />
+        <strong>IBU:</strong> 12 <br />
+        <strong>Vol:</strong> 5% <br /><br />
+        <strong>Sugestão de harmonização:</strong> Excelente com pratos apimentados, carnes vermelhas e queijos maturados.
+      </div>
+    ),
   },
   {
     id: 5,
     name: "Darela",
     logo: DarelaLogo,
-    description: "Darela oferece um chopp Pilsen tradicional, com teor alcoólico de 4,5% e IBU de 10, garantindo leveza e refrescância em cada gole.",
+    description: (
+      <div className="text-left mx-auto max-w-[400px]">
+        Clássico e refrescante, perfeito para os melhores momentos. <br /><br />
+        <strong>Tipo:</strong> Pilsen <br />
+        <strong>IBU:</strong> 9 <br />
+        <strong>Vol:</strong> 4,3% <br /><br />
+        <strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, churrascos, pratos leves e aperitivos.
+      </div>
+    ),
   },
   {
     id: 6,
     name: "Darela Art.",
     logo: DarelaArtLogo,
-    description: "Darela Art. apresenta chopps artesanais exclusivos, como o IPA com teor alcoólico de 6,2% e IBU de 50, ideal para os amantes de sabores intensos e amargor pronunciado.",
+    description: (
+      <div className="text-left mx-auto max-w-[400px]">
+        Refrescante e lupulado, perfeito para qualquer momento. <br /><br />
+        <strong>Tipo:</strong> Pilsen <br />
+        <strong>IBU:</strong> 10 <br />
+        <strong>Vol:</strong> 4,7% <br /><br />
+        <strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, pizzas, pratos leves e aperitivos.
+      </div>
+    ),
   },
 ];
 
@@ -62,7 +110,7 @@ export const Tabs = () => {
         </div>
 
         {/* Tabs organizadas em 3 colunas */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-4">
           {brands.map((brand) => (
             <button
               key={brand.id}

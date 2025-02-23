@@ -12,42 +12,42 @@ export const Regiao = () => {
 
   return (
     <section id="regiao">
-      <div className="container mx-auto mb-6">
-        <div className="section-header section-heading text-center">
-          <h2 className="section-title">Região de atendimento</h2>
-          <p className="section-description">Selecione a unidade mais próxima de você</p>
-        </div>
-
-        {/* Tabs */}
-        <div className="flex flex-wrap justify-center">
-          <ul className="flex mb-6 list-none flex-wrap gap-4" role="tablist">
-            <li className="cursor-pointer">
-              <a
-                className={`w-40 md:w-60 text-sm font-bold uppercase px-6 py-3 rounded-lg text-center transition-all ${
-                  openTab === 1 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
-                }`}
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(1);
-                }}
-              >
-                Criciúma
-              </a>
-            </li>
-            <li className="cursor-pointer">
-              <a
-                className={`w-40 md:w-60 text-sm font-bold uppercase px-6 py-3 rounded-lg text-center transition-all ${
-                  openTab === 2 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
-                }`}
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(2);
-                }}
-              >
-                Tubarão
-              </a>
-            </li>
-          </ul>
+    <div className="container mx-auto mb-6">
+      <div className="section-header section-heading text-center">
+        <h2 className="section-title">Região de atendimento</h2>
+        <p className="section-description">Selecione a unidade mais próxima de você</p>
+      </div>
+  
+      {/* Tabs */}
+      <div className="flex justify-center w-full">
+        <ul className="flex w-full max-w-lg mb-4 list-none gap-4" role="tablist">
+          <li className="flex-1">
+            <a
+              className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
+                openTab === 1 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
+              }`}
+              onClick={e => {
+                e.preventDefault();
+                setOpenTab(1);
+              }}
+            >
+              Criciúma
+            </a>
+          </li>
+          <li className="flex-1">
+            <a
+              className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
+                openTab === 2 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
+              }`}
+              onClick={e => {
+                e.preventDefault();
+                setOpenTab(2);
+              }}
+            >
+              Tubarão
+            </a>
+          </li>
+        </ul>
         </div>
 
         {/* Conteúdo das tabs */}
@@ -62,7 +62,7 @@ export const Regiao = () => {
             {/* Descrição */}
             <div className="text-center sm:text-left">
               <h3 className="text-xl font-semibold mb-2">Criciúma e região</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-lg">
                 Atendemos Criciúma e cidades próximas com chopp gelado, entrega rápida e suporte para eventos.
                 Escolha a melhor opção para sua festa ou bar.
               </p>
@@ -71,7 +71,7 @@ export const Regiao = () => {
                   href="https://wa.me/5548999900074?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition"
+                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium text-lg bg-[#008200] hover:bg-[#006620] transition"
                 >
                   Fale Conosco <LogoWhats className="w-5 h-5" />
                 </a>
@@ -89,7 +89,7 @@ export const Regiao = () => {
             {/* Descrição */}
             <div className="text-center sm:text-left">
               <h3 className="text-xl font-semibold mb-2">Tubarão e região</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-lg">
                 Levamos chopp gelado para Tubarão e cidades vizinhas. Atendimento para bares, festas e eventos especiais.
               </p>
               <button className="mt-4">
@@ -97,7 +97,7 @@ export const Regiao = () => {
                   href="https://wa.me/5548999177835?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition"
+                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium text-lg bg-[#008200] hover:bg-[#006620] transition"
                 >
                   Fale Conosco <LogoWhats className="w-5 h-5" />
                 </a>
