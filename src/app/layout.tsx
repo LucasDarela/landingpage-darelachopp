@@ -50,7 +50,7 @@ export default function RootLayout({
       <head>
         <meta name="robots" content="index, follow" />
       </head>
-      <body className={clsx(dmSans.className, "antialiased bg-[#0000]")}>
+      <body className={clsx(dmSans.className, "overflow-x-hidden antialiased bg-[#0000]")}>
         <main>{children}</main>
       </body>
     </html>
