@@ -118,15 +118,15 @@ const TestimonialsColumn = (props: {
 
 export const Testimonials = () => {
   return (
-    <section className="bg-white" id="clients">
+    <section className="bg-white my-16" id="clients">
       <div className="container mx-auto">
-        <div className="section-heading">
+        <div className="section-heading section-header">
           <div className="flex justify-center">
-            <div className="tag">Testimonials</div>
+            <div className="tag">Testemunhos</div>
           </div>
           <h2 className="section-title mt-5">O que nossos clientes dizem</h2>
           <p className="section-description mt-5">
-            From intuitive design to powerful features, our app has become an essential tool for users around the world.
+          Experiências reais de quem já escolheu a qualidade e o sabor do nosso chopp
           </p>
         </div>
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">

@@ -24,7 +24,7 @@
   }
 
   .section-title {
-    @apply text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text;
+    @apply text-center text-4xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text;
   }
 
   .section-description {
@@ -33,6 +33,10 @@
 
   .section-heading {
     @apply max-w-[540px] mx-auto;
+  }
+
+  .section-header {
+    @apply space-y-6 py-10
   }
 
   .card {

@@ -71,7 +71,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center gap-6 mt-6">
           <div className="flex gap-6">
             <a
-              href="https://www.google.com/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"
@@ -79,7 +79,7 @@ export const Footer = () => {
               <SocialX className="hover:text-[#008200]" />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/darela.chopp"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"
@@ -87,7 +87,7 @@ export const Footer = () => {
               <SocialInsta className="hover:text-[#008200]" />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"
@@ -95,7 +95,7 @@ export const Footer = () => {
               <SocialLinkedIn className="hover:text-[#008200]" />
             </a>
             <a
-              href="https://www.youtube.com/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"

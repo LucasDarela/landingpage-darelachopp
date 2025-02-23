@@ -1,174 +1,96 @@
-'use client'
+"use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import ColoniaLogo from '@/assets/logo-bk.png'
-import HardenLogo from '@/assets/logo-bk.png'
-import LohnLogo from '@/assets/logo-bk.png'
-import Autentico from '@/assets/logo-bk.png'
+import HeinekenLogo from "@/assets/logo-heineken.png";
+import AmstelLogo from "@/assets/logo-bk.png";
+import LohnLogo from "@/assets/logo-bk.png";
+import SaintLogo from "@/assets/logo-bk.png";
+import DarelaLogo from "@/assets/logo-bk.png";
+import DarelaArtLogo from "@/assets/logo-bk.png";
 
+const brands = [
+  {
+    id: 1,
+    name: "Heineken",
+    logo: HeinekenLogo,
+    description: "O chopp Heineken é conhecido por seu sabor equilibrado e refrescante, com um teor alcoólico de 5% e IBU de 19, proporcionando uma experiência única aos apreciadores.",
+  },
+  {
+    id: 2,
+    name: "Amstel",
+    logo: AmstelLogo,
+    description: "Amstel oferece um chopp leve e suave, com teor alcoólico de 4,6% e IBU de 18, ideal para quem busca uma bebida refrescante e de fácil degustação.",
+  },
+  {
+    id: 3,
+    name: "Lohn Bier",
+    logo: LohnLogo,
+    description: "Lohn Bier apresenta uma variedade de chopps artesanais, destacando-se pelo chopp Pilsen com teor alcoólico de 4,8% e IBU de 12, perfeito para harmonizar com diversos pratos.",
+  },
+  {
+    id: 4,
+    name: "Saint Bier",
+    logo: SaintLogo,
+    description: "Saint Bier traz o chopp de vinho, uma opção diferenciada com teor alcoólico de 6,5% e IBU de 15, combinando notas frutadas e um sabor marcante.",
+  },
+  {
+    id: 5,
+    name: "Darela",
+    logo: DarelaLogo,
+    description: "Darela oferece um chopp Pilsen tradicional, com teor alcoólico de 4,5% e IBU de 10, garantindo leveza e refrescância em cada gole.",
+  },
+  {
+    id: 6,
+    name: "Darela Art.",
+    logo: DarelaArtLogo,
+    description: "Darela Art. apresenta chopps artesanais exclusivos, como o IPA com teor alcoólico de 6,2% e IBU de 50, ideal para os amantes de sabores intensos e amargor pronunciado.",
+  },
+];
 
-const Tabs = () => {
-  const [openTab, setOpenTab] = React.useState(1);
+export const Tabs = () => {
+  const [openTab, setOpenTab] = useState(1);
+
   return (
+    <section className="py-12 mb-6 bg-gradient-to-t from-[#FFFFFF] to-[#008200]/50" id="chopes">
+      <div className="container">
+        <div className="section-header section-heading text-center">
+          <h2 className="section-title">Nossas Marcas</h2>
+          <p className="section-description">
+            Trabalhamos com as melhores marcas para garantir qualidade e sabor incomparáveis.
+          </p>
+        </div>
 
-<section className="py-2" id='chopes'>
-<div className="container">
-            <div className="space-y-10 py-16">
-                <h1 className="section-title">
-                    Nossas Marcas
-                </h1>
-            </div>
+        {/* Tabs organizadas em 3 colunas */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {brands.map((brand) => (
+            <button
+              key={brand.id}
+              className={`text-sm font-bold uppercase px-5 py-3 rounded-lg transition-all ${
+                openTab === brand.id ? "bg-green-700 text-white" : "bg-white shadow-md text-gray-600"
+              }`}
+              onClick={() => setOpenTab(brand.id)}
+            >
+              {brand.name}
+            </button>
+          ))}
+        </div>
 
-
-      <div className="flex flex-wrap px-14">
-        <div className="w-full">
-          <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
-            role="tablist"
-          >
-            {/* Colônia */}
-            <li className="-mb-px mr-2 mt-2 last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 1
-                    ? "selected-tab"
-                    : "text-blueGray-600 bg-white")
-                }
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(1);
-                }}
-                data-toggle="tab"
-                href="#link1"
-                role="tablist"
-              >
-                Colônia
-              </a>
-            </li>
-            {/* Harden */}
-            <li className="-mb-px mr-2 mt-2  last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 2
-                    ? "selected-tab"
-                    : "text-blueGray-600 bg-white")
-                }
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(2);
-                }}
-                data-toggle="tab"
-                href="#link2"
-                role="tablist"
-              >
-                Harden
-              </a>
-            </li>
-            {/* Lohn */}
-            <li className="-mb-px mr-2 mt-2  last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 3
-                    ? "selected-tab"
-                    : "text-blueGray-600 bg-white")
-                }
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(3);
-                }}
-                data-toggle="tab"
-                href="#link3"
-                role="tablist"
-              >
-                Lohn Bier
-              </a>
-            </li>
-            {/* Autêntico */}
-            <li className="-mb-px mr-2 mt-2  last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 4
-                    ? "selected-tab"
-                    : "text-blueGray-600 bg-white")
-                }
-                onClick={e => {
-                  e.preventDefault();
-                  setOpenTab(4);
-                }}
-                data-toggle="tab"
-                href="#link4"
-                role="tablist"
-              >
-                Autêntico
-              </a>
-            </li>
-
-          </ul>
-
-          {/* Conteúdo */}
-
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-            <div className="px-4 py-5 flex-auto">
-              <div className="tab-content tab-space">
-               
-                {/* Colônia */}
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                    <Image src={ColoniaLogo} className="marcas-tab" alt="colonia" />
-                  <p>
-                    Chopp Pilsen Suave, comercial de colarinho cremoso e dourado,
-                    aroma e paladar destacam o malte, grande versatilidade para harmonização de pratos.
-                    <br />
-                    <br />  Teor alcoólico 4,2% e IBU 5,1.
-                  </p>
-                  <br /><button className="pointer"> <a href="/chopp-colonia">Saiba Mais</a> </button>
-                </div>
-
-                {/* Harden */}
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className="flex-auto text-center">
-                      <Image src={HardenLogo} className="marcas-tab" alt="harden" />
-                  </div>
-                  <p>
-                  Chopp Pilsen Suave, comercial de colarinho cremoso e dourado,
-                    aroma e paladar destacam o malte, grande versatilidade para harmonização de pratos.
-                    <br />
-                    <br />Teor alcoólico 4,2% e IBU 5,1.
-                  </p>
-                </div>
-
-                {/* Lohn */}
-                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                    <Image src={LohnLogo} className="marcas-tab" alt="lohn" />
-                  <p>
-                    Um Chopp refrescante e dourado, leve e com lúpulos e carbonatação ideais para preservar o sabor do puro malte Pilsen.
-                    <br /> 4,6% Vol 11IBU 2-6ºC
-                    <br /> Combina com pratos diversos, de petiscos e salgadinhos a preparados com temperos, como churrasco, feijoada, carreteiro e paella.
-                  </p>
-                </div>
-
-                {/* Autêntio  */}
-                <div className={openTab === 4 ? "block" : "hidden"} id="link4">
-                  <div className="flex-auto text-center">
-                      <Image src={Autentico} className="marcas-tab " alt="autentico" />
-                  </div>
-                  <p>
-                    Chopp de vinho
-                    <br /> 4,6% Vol 11IBU 2-6ºC
-                    <br /> Combina com pratos diversos, de petiscos e salgadinhos a preparados com temperos, como churrasco, feijoada, carreteiro e paella.
-                  </p>
-                </div>
+        {/* Conteúdo das Tabs */}
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          {brands.map((brand) => (
+            <div key={brand.id} className={openTab === brand.id ? "block" : "hidden"}>
+              <div className="flex flex-col items-center">
+                <Image src={brand.logo} alt={`${brand.name} Logo`} className="w-32 h-auto mb-4" />
+                <p className="text-gray-600 text-center max-w-lg">
+                  {brand.description}
+                </p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-      </div>
-      </section>
+    </section>
   );
 };
 

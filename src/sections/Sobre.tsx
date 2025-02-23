@@ -1,13 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import lupulo1Image from "@/assets/lupulo1.png"
 import lupulo2Image from "@/assets/lupulo1.png"
 
 export const Sobre = () => {
+
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start']
+  });
+const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
+
   return (
-    <section id="sobre" className="py-10 bg-gray-100">
+    <section ref={sectionRef} id="sobre" className="py-10 bg-gradient-to-b from-[#FFFFFF] to-[#008200]/50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="section-heading">
         <h2 className="section-title mb-4">Sobre</h2>
@@ -21,18 +31,26 @@ export const Sobre = () => {
         </p>
         
         </div>
-                <Image src={lupulo1Image} 
+        <div className="relative">
+                <motion.img src={lupulo1Image.src} 
         alt={"lúpulo image"} 
         height={263} 
         width={262} 
-        className="absolute -right-36 top-32"
+        className="hidden md:block absolute -right-36 bottom-10"
+        style={{
+          translateY,
+        }}
         />
-                <Image src={lupulo2Image} 
+                <motion.img src={lupulo2Image.src} 
         alt={"lúpulo image 2"} 
         height={263} 
         width={262} 
-        className="absolute bottom-24 -left-36"
+        className="hidden md:block absolute bottom-32 -left-36"
+        style={{
+          translateY,
+        }}
         />
+        </div>
 
       </div>
       

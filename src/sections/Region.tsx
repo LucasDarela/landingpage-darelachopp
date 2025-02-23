@@ -1,133 +1,129 @@
-'use client'
+"use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import ColoniaLogo from '@/assets/logo-bk.png'
-import HardenLogo from '@/assets/logo-bk.png'
-import LohnLogo from '@/assets/logo-bk.png'
-import Autentico from '@/assets/logo-bk.png'
-
+import CriciumaRegiao from '@/assets/regiao-criciuma.png';
+import TubaraoRegiao from '@/assets/regiao-tubarao.png';
+import LogoWhats from '@/assets/logo-whatsapp.svg';
 
 export const Regiao = () => {
-      const [openTab, setOpenTab] = React.useState(1);
-    return (
-<section id="regiao">
-    <div className="container">
-        <div className="section-heading">
-            <h2 className="section-title">Região de atendimento</h2>
-            <p className="section-description">Selecione a unidade mais próxima de você</p>
+  const [openTab, setOpenTab] = useState(1);
+  const [modalImage, setModalImage] = useState<string | null>(null);
+
+  return (
+    <section id="regiao">
+      <div className="container mx-auto mb-6">
+        <div className="section-header section-heading text-center">
+          <h2 className="section-title">Região de atendimento</h2>
+          <p className="section-description">Selecione a unidade mais próxima de você</p>
         </div>
 
-{/* inicio das tabs*/}
-
-<div className="flex flex-wrap px-14">
-        <div className="w-full">
-          <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
-            role="tablist"
-          >
-            {/* Colônia */}
-            <li className="-mb-px mr-2 mt-2 last:mr-0 flex-auto text-center">
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center">
+          <ul className="flex mb-6 list-none flex-wrap gap-4" role="tablist">
+            <li className="cursor-pointer">
               <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 1
-                    ? "selected-tab"
-                    : "text-blueGray-600 bg-white")
-                }
+                className={`w-40 md:w-60 text-sm font-bold uppercase px-6 py-3 rounded-lg text-center transition-all ${
+                  openTab === 1 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
+                }`}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(1);
                 }}
-                data-toggle="tab"
-                href="#link1"
-                role="tablist"
               >
                 Criciúma
               </a>
             </li>
-            {/* Harden */}
-            <li className="-mb-px mr-2 mt-2  last:mr-0 flex-auto text-center">
+            <li className="cursor-pointer">
               <a
-                className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 2
-                    ? "selected-tab"
-                    : "text-blueGray-600 bg-white")
-                }
+                className={`w-40 md:w-60 text-sm font-bold uppercase px-6 py-3 rounded-lg text-center transition-all ${
+                  openTab === 2 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
+                }`}
                 onClick={e => {
                   e.preventDefault();
                   setOpenTab(2);
                 }}
-                data-toggle="tab"
-                href="#link2"
-                role="tablist"
               >
                 Tubarão
               </a>
             </li>
           </ul>
+        </div>
 
-          {/* Conteúdo */}
+        {/* Conteúdo das tabs */}
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          {/* Criciúma */}
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${openTab === 1 ? "block" : "hidden"}`}>
+            {/* Imagem */}
+            <div className="cursor-pointer w-full max-w-[300px] sm:max-w-full mx-auto md:mx-0" onClick={() => setModalImage(CriciumaRegiao.src)}>
+              <Image src={CriciumaRegiao} alt="Criciúma Região" className="rounded-lg shadow-lg" />
+            </div>
 
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-            <div className="px-4 py-5 flex-auto">
-              <div className="tab-content tab-space">
-               
-                {/* Colônia */}
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                    <Image src={ColoniaLogo} className="marcas-tab" alt="colonia" />
-                  <p>
-                    Chopp Pilsen Suave, comercial de colarinho cremoso e dourado,
-                    aroma e paladar destacam o malte, grande versatilidade para harmonização de pratos.
-                    <br />
-                    <br />  Teor alcoólico 4,2% e IBU 5,1.
-                  </p>
-                  <br /><button className="pointer"> <a href="/chopp-colonia">Saiba Mais</a> </button>
-                </div>
+            {/* Descrição */}
+            <div className="text-center sm:text-left">
+              <h3 className="text-xl font-semibold mb-2">Criciúma e região</h3>
+              <p className="text-gray-600">
+                Atendemos Criciúma e cidades próximas com chopp gelado, entrega rápida e suporte para eventos.
+                Escolha a melhor opção para sua festa ou bar.
+              </p>
+              <button className="mt-4">
+                <a
+                  href="https://wa.me/5548999900074?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition"
+                >
+                  Fale Conosco <LogoWhats className="w-5 h-5" />
+                </a>
+              </button>
+            </div>
+          </div>
 
-                {/* Harden */}
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className="flex-auto text-center">
-                      <Image src={HardenLogo} className="marcas-tab" alt="harden" />
-                  </div>
-                  <p>
-                  Chopp Pilsen Suave, comercial de colarinho cremoso e dourado,
-                    aroma e paladar destacam o malte, grande versatilidade para harmonização de pratos.
-                    <br />
-                    <br />Teor alcoólico 4,2% e IBU 5,1.
-                  </p>
-                </div>
+          {/* Tubarão */}
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${openTab === 2 ? "block" : "hidden"}`}>
+            {/* Imagem */}
+            <div className="cursor-pointer w-full max-w-[300px] sm:max-w-full mx-auto md:mx-0" onClick={() => setModalImage(TubaraoRegiao.src)}>
+              <Image src={TubaraoRegiao} alt="Tubarão Região" className="rounded-lg shadow-lg" />
+            </div>
 
-                {/* Lohn */}
-                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                    <Image src={LohnLogo} className="marcas-tab" alt="lohn" />
-                  <p>
-                    Um Chopp refrescante e dourado, leve e com lúpulos e carbonatação ideais para preservar o sabor do puro malte Pilsen.
-                    <br /> 4,6% Vol 11IBU 2-6ºC
-                    <br /> Combina com pratos diversos, de petiscos e salgadinhos a preparados com temperos, como churrasco, feijoada, carreteiro e paella.
-                  </p>
-                </div>
-
-                {/* Autêntio  */}
-                <div className={openTab === 4 ? "block" : "hidden"} id="link4">
-                  <div className="flex-auto text-center">
-                      <Image src={Autentico} className="marcas-tab " alt="autentico" />
-                  </div>
-                  <p>
-                    Chopp de vinho
-                    <br /> 4,6% Vol 11IBU 2-6ºC
-                    <br /> Combina com pratos diversos, de petiscos e salgadinhos a preparados com temperos, como churrasco, feijoada, carreteiro e paella.
-                  </p>
-                </div>
-              </div>
+            {/* Descrição */}
+            <div className="text-center sm:text-left">
+              <h3 className="text-xl font-semibold mb-2">Tubarão e região</h3>
+              <p className="text-gray-600">
+                Levamos chopp gelado para Tubarão e cidades vizinhas. Atendimento para bares, festas e eventos especiais.
+              </p>
+              <button className="mt-4">
+                <a
+                  href="https://wa.me/5548999177835?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition"
+                >
+                  Fale Conosco <LogoWhats className="w-5 h-5" />
+                </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-
-    </div>
-</section>
-    );
-}
+      {/* Modal para exibir imagem em tamanho reduzido */}
+      {modalImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={() => setModalImage(null)}
+        >
+          <div className="relative p-4 bg-white rounded-lg shadow-lg">
+            <Image src={modalImage} alt="Mapa da região" width={500} height={400} className="rounded-lg shadow-lg" />
+            <button
+              className="absolute top-2 right-4 text-gray-700 text-3xl font-bold cursor-pointer"
+              onClick={() => setModalImage(null)}
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};

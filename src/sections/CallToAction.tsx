@@ -33,7 +33,7 @@ export const CallToAction = () => {
           <WhatsAppModal />
           <button 
                 onClick={scrollToRegion}
-                className="btn btn-text gap-1 inline-flex whitespace-nowrap hover:text-gray hover:scale-105 transition"
+                className="sm:hidden md:flex btn btn-text gap-1 inline-flex whitespace-nowrap hover:text-gray hover:scale-105 transition"
               >
                 <span>Região de atendimento</span>
                 <ArrowRight className="h-5 w-5" />

@@ -5,7 +5,7 @@ import pyramidImage from "@/assets/lupulo1.png";
 import tubeImage from "@/assets/lupulo1.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const ChoppCalculator = () => {
+export const ChoppCalculator = () => {
   const [people, setPeople] = useState<number>(0);
   const [eventType, setEventType] = useState<string>("churrasco");
   const [duration, setDuration] = useState<number>(0);
@@ -87,12 +87,15 @@ const ChoppCalculator = () => {
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <section className="relative py-10" id="calculadora">
+    <section className="relative" id="choppcalculator">
       <div className="container mx-auto">
-        <div className="section-heading">
-          <h2 className="section-title my-12 text-5xl">
+        <div className="section-heading section-header">
+          <h2 className="section-title my-12">
             Calculadora de Chopp para Evento
           </h2>
+          <p className="section-description">Tenha uma média de quantos litros seus convidados irão consumir</p>
+        </div>
+        <div className="section-heading">
           <form onSubmit={handleCalculate} className="space-y-4">
             <div>
               <label className="block font-semibold mb-1">
@@ -138,7 +141,7 @@ const ChoppCalculator = () => {
               <label className="block font-semibold mb-1">
                 Também vai ter:
               </label>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 p-2">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
@@ -177,7 +180,7 @@ const ChoppCalculator = () => {
             </div>
           )}
         </div>
-        <div className="relative">
+        {/* <div className="relative">
           <motion.img
             src={pyramidImage.src}
             alt="Pyramid"
@@ -194,7 +197,7 @@ const ChoppCalculator = () => {
             className="hidden md:block absolute bottom-24 -left-36"
             style={{ translateY }}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
