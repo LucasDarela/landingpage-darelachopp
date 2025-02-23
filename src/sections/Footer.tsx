@@ -60,9 +60,23 @@ export const Footer = () => {
             Clientes
           </a>
           <a
-            href="#faqs"
+            href="#regiao"
             className="hover:text-[#008200]"
-            onClick={(e) => handleScroll(e, "#faqs")}
+            onClick={(e) => handleScroll(e, "#regiao")}
+          >
+            Região
+          </a>
+          <a
+            href="#choppcalculator"
+            className="hover:text-[#008200]"
+            onClick={(e) => handleScroll(e, "#choppcalculator")}
+          >
+            Calculadora
+          </a>
+          <a
+            href="#faq"
+            className="hover:text-[#008200]"
+            onClick={(e) => handleScroll(e, "#faq")}
           >
             Ajuda
           </a>
