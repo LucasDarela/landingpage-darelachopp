@@ -16,11 +16,11 @@ export const Hero = () => {
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
-  // Função para scroll suave até a seção "regiao" com offset de 80px
-  const scrollToRegion = () => {
-    const regionSection = document.getElementById("regiao");
+  // Função para scroll suave até a seção "chopes" com offset de 80px
+  const scrollToMarcas = () => {
+    const regionSection = document.getElementById("chopes");
     if (regionSection) {
-      const headerOffset = 80;
+      const headerOffset = 40;
       const elementPosition = regionSection.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
       window.scrollTo({
@@ -64,10 +64,10 @@ export const Hero = () => {
             <div className="flex gap-1 sm:pt-4 pt-8 items-center mt-[30px] relative z-50">
               <WhatsAppModal />
               <button 
-                onClick={scrollToRegion}
+                onClick={scrollToMarcas}
                 className="btn btn-text gap-1 inline-flex whitespace-nowrap hover:text-gray hover:scale-105 transition"
               >
-                <span>Região de atendimento</span>
+                <span className='tracking-tighter'>Saiba Mais</span>
                 <ArrowIcon className="h-5 w-5" />
               </button>
             </div>

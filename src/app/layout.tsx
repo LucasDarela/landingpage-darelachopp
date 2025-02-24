@@ -6,7 +6,7 @@ import clsx from "clsx";
 const dmSans = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Darela Chopp | Chopp Gelado em Criciúma",
+  title: "Darela Chopp | Chopp Sempre Gelado",
   description:
     "A melhor distribuidora de chopp de Criciúma e Tubarão! Trabalhamos com Heineken, Amstel, Lohn Bier e muito mais. Barris de chopp de 30L e 50L, aluguel de chopeiras e entrega rápida.",
   keywords: [
@@ -22,9 +22,13 @@ export const metadata: Metadata = {
     "chopp Heineken",
     "chopp Amstel",
     "chopp Lohn Bier",
+    "chope delivery",
+    "chopp delivery",
+    "aluguel de chope",
+    "barril de chope",
   ].join(", "),
   openGraph: {
-    title: "Darela Chopp | Chopp Gelado em Criciúma",
+    title: "Darela Chopp | Chopp Sempre Gelado",
     description:
       "Distribuidora de chopp em Criciúma e região. Barris de 30L e 50L, aluguel de chopeiras e entrega rápida. Trabalhamos com Heineken, Amstel, Lohn Bier e muito mais.",
     url: "https://www.darelachopp.com.br",

@@ -19,9 +19,7 @@ const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
     <section ref={sectionRef} id="sobre" className="py-10 bg-gradient-to-b from-[#FFFFFF] to-[#008200]/50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="section-heading">
-        <h2 className="section-title mb-4">Sobre</h2>
-
-  
+        <h2 className="section-title section-header">Sobre</h2>
         <p className="section-description">
           A Darela Chopp Express está há mais de 15 anos no mercado trazendo qualidade e inovação para o Sul Catarinense. Com unidades em Criciúma e Tubarão, oferecemos produtos premium e atendimento de excelência, garantindo que cada evento seja inesquecível. Nosso sistema leva e traz facilita a instalação e recolhimento, proporcionando comodidade para nossos clientes.
         </p>

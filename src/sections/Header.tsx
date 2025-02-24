@@ -17,7 +17,7 @@ export const Header = () => {
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
-      const headerOffset = 80;
+      const headerOffset = 40;
       const elementPosition = section.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
       window.scrollTo({
@@ -140,7 +140,7 @@ export const Header = () => {
                 Tubarão <Image src={LogoWhats} alt="WhatsApp" width={20} height={20} />
               </a>
             </div>
-            <button onClick={closeWhatsAppModal} className="absolute top-2 right-5 text-gray-500 hover:text-gray-700 cursor-pointer text-xl">
+            <button onClick={closeWhatsAppModal} className="absolute top-2 right-5 text-gray-500 hover:text-gray-700 cursor-pointer text-3xl">
               &times;
             </button>
           </motion.div>

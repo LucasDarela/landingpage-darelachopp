@@ -100,7 +100,7 @@ export const Tabs = () => {
   const [openTab, setOpenTab] = useState(1);
 
   return (
-    <section className="py-12 mb-6 bg-gradient-to-t from-[#FFFFFF] to-[#008200]/50" id="chopes">
+    <section className="py-12 bg-gradient-to-t from-[#FFFFFF] to-[#008200]/50" id="chopes">
       <div className="container">
         <div className="section-header section-heading text-center">
           <h2 className="section-title">Nossas Marcas</h2>
@@ -115,7 +115,7 @@ export const Tabs = () => {
             <button
               key={brand.id}
               className={`text-sm font-bold uppercase px-5 py-3 rounded-lg transition-all ${
-                openTab === brand.id ? "bg-green-700 text-white" : "bg-white shadow-md text-gray-600"
+                openTab === brand.id ? "bg-[#008200] text-white" : "bg-white shadow-md text-gray-600"
               }`}
               onClick={() => setOpenTab(brand.id)}
             >

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import LogoWhats from "@/assets/logo-whatsapp.png";
-import { FaArrowUp, FaTimes } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
 
 const FloatingButtons = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -28,7 +28,7 @@ const FloatingButtons = () => {
       {/* Botão Flutuante do WhatsApp */}
       <button
         onClick={() => setIsModalOpen(true)}
-        className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-50"
+        className="fixed bottom-6 right-6 bg-[#008200] hover:bg-[#006620] hover:scale-110 whitespace-nowrap text-white p-3 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-50"
         aria-label="Abrir modal do WhatsApp"
       >
         <Image src={LogoWhats} alt="WhatsApp" width={30} height={30} />
@@ -83,9 +83,9 @@ const FloatingButtons = () => {
 
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-2 right-4 text-gray-500 hover:text-gray-700 cursor-pointer text-2xl"
+              className="absolute top-2 right-4 text-gray-500 hover:text-gray-700 cursor-pointer text-3xl"
             >
-              <FaTimes />
+              &times;
             </button>
           </motion.div>
         </div>

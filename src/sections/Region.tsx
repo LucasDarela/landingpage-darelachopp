@@ -11,8 +11,8 @@ export const Regiao = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   return (
-    <section id="regiao">
-    <div className="container mx-auto mb-6">
+    <section className='pt-1' id="regiao">
+    <div className="container mx-auto mb-6 mt-8">
       <div className="section-header section-heading text-center">
         <h2 className="section-title">Região de atendimento</h2>
         <p className="section-description">Selecione a unidade mais próxima de você</p>
@@ -24,7 +24,7 @@ export const Regiao = () => {
           <li className="flex-1">
             <a
               className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
-                openTab === 1 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
+                openTab === 1 ? "bg-[#008200] text-white" : "bg-white shadow-lg text-gray-600"
               }`}
               onClick={e => {
                 e.preventDefault();
@@ -37,7 +37,7 @@ export const Regiao = () => {
           <li className="flex-1">
             <a
               className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
-                openTab === 2 ? "bg-green-700 text-white" : "bg-white shadow-lg text-gray-600"
+                openTab === 2 ? "bg-[#008200] text-white" : "bg-white shadow-lg text-gray-600"
               }`}
               onClick={e => {
                 e.preventDefault();
@@ -71,7 +71,7 @@ export const Regiao = () => {
                   href="https://wa.me/5548999900074?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium text-lg bg-[#008200] hover:bg-[#006620] transition"
+                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition"
                 >
                   Fale Conosco <LogoWhats className="w-5 h-5" />
                 </a>

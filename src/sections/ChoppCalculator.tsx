@@ -124,7 +124,7 @@ export const ChoppCalculator = () => {
               type="submit"
               className="w-full bg-[#008200] text-white py-2 rounded-2xl hover:bg-[#006620] transition"
             >
-              Calcular
+              Calcular <i className="fa-solid fa-calculator"></i>
             </button>
           </form>
           {result !== null && (

@@ -16,7 +16,7 @@ export const WhatsAppModal = () => {
         onClick={() => setIsOpen(true)}
         className="flex items-center justify-center gap-2 btn-primary text-white px-4 py-2 rounded-lg font-medium tracking-tight transition-all duration-300 transform hover:bg-[#006620] hover:scale-110 whitespace-nowrap"
       >
-        <Image src={LogoWhats} alt="WhatsApp" width={20} height={20} /> Fale Conosco
+        Fale Conosco<Image src={LogoWhats} alt="WhatsApp" width={20} height={20} /> 
       </button>
 
       {/* Modal */}
@@ -58,7 +58,7 @@ export const WhatsAppModal = () => {
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-2 right-5 text-gray-500 hover:text-gray-700 cursor-pointer text-xl"
+              className="absolute top-2 right-5 text-gray-500 hover:text-gray-700 cursor-pointer text-3xl"
             >
               &times;
             </button>
