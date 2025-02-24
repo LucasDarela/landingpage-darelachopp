@@ -97,7 +97,7 @@ export const Regiao = () => {
                   href="https://wa.me/5548999177835?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium text-lg bg-[#008200] hover:bg-[#006620] transition"
+                  className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition"
                 >
                   Fale Conosco <LogoWhats className="w-5 h-5" />
                 </a>
