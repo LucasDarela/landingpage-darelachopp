@@ -56,12 +56,12 @@ export const Header = () => {
 
             {/* Navbar Desktop */}
             <nav className='hidden lg:flex gap-6 text-black/60 items-center font-medium'>
-              <a onClick={() => scrollToSection('sobre')} className="cursor-pointer">Sobre</a>
-              <a onClick={() => scrollToSection('chopes')} className="cursor-pointer">Marcas</a>
-              <a onClick={() => scrollToSection('clients')} className="cursor-pointer">Clientes</a>
-              <a onClick={() => scrollToSection('regiao')} className="cursor-pointer">Região</a>
-              <a onClick={() => scrollToSection('choppcalculator')} className="cursor-pointer">Calculadora</a>
-              <a onClick={() => scrollToSection('faq')} className="cursor-pointer">Ajuda</a>
+              <button onClick={() => scrollToSection('sobre')} className="cursor-pointer">Sobre</button>
+              <button onClick={() => scrollToSection('chopes')} className="cursor-pointer">Marcas</button>
+              <button onClick={() => scrollToSection('clients')} className="cursor-pointer">Clientes</button>
+              <button onClick={() => scrollToSection('regiao')} className="cursor-pointer">Região</button>
+              <button onClick={() => scrollToSection('choppcalculator')} className="cursor-pointer">Calculadora</button>
+              <button onClick={() => scrollToSection('faq')} className="cursor-pointer">Ajuda</button>
               <button
                 onClick={openWhatsAppModal}
                 className="btn-primary text-white px-4 py-2 rounded-lg font-medium tracking-tight flex items-center gap-2 transition-all duration-300 transform hover:bg-[#006620] hover:scale-110 whitespace-nowrap"
@@ -72,7 +72,7 @@ export const Header = () => {
 
             {/* Ícone do Menu Mobile */}
             <div className="lg:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className="transition-all duration-300">
+              <button aria-label="Abrir menu" onClick={() => setIsOpen(!isOpen)} className="transition-all duration-300">
                 {isOpen ? (
                   <span className="text-2xl">&times;</span> // Ícone de fechar (X)
                 ) : (
@@ -100,12 +100,12 @@ export const Header = () => {
             "lg:hidden absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 p-6 transition-all duration-300",
             isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
           )}>
-            <a onClick={() => scrollToSection('sobre')} className="cursor-pointer">Sobre</a>
-            <a onClick={() => scrollToSection('chopes')} className="cursor-pointer">Marcas</a>
-            <a onClick={() => scrollToSection('clients')} className="cursor-pointer">Clientes</a>
-            <a onClick={() => scrollToSection('regiao')} className="cursor-pointer">Região</a>
-            <a onClick={() => scrollToSection('choppcalculator')} className="cursor-pointer">Calculadora</a>
-            <a onClick={() => scrollToSection('faq')} className="cursor-pointer">Ajuda</a>
+            <button onClick={() => scrollToSection('sobre')} className="cursor-pointer">Sobre</button>
+            <button onClick={() => scrollToSection('chopes')} className="cursor-pointer">Marcas</button>
+            <button onClick={() => scrollToSection('clients')} className="cursor-pointer">Clientes</button>
+            <button onClick={() => scrollToSection('regiao')} className="cursor-pointer">Região</button>
+            <button onClick={() => scrollToSection('choppcalculator')} className="cursor-pointer">Calculadora</button>
+            <button onClick={() => scrollToSection('faq')} className="cursor-pointer">Ajuda</button>
             <button
               onClick={openWhatsAppModal}
               className="btn-primary text-white px-4 py-2 rounded-lg font-medium tracking-tight flex items-center gap-2"

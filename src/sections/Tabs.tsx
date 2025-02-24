@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import HeinekenLogo from "@/assets/tab-heineken.png";
-import AmstelLogo from "@/assets/tab-amstel.png";
-import LohnLogo from "@/assets/tab-lohn.png";
-import SaintLogo from "@/assets/tab-saint.png";
-import DarelaLogo from "@/assets/tab-darela.png";
-import DarelaArtLogo from "@/assets/tab-darela.png";
+import HeinekenLogo from "@/assets/tab-heineken.webp";
+import AmstelLogo from "@/assets/tab-amstel.webp";
+import LohnLogo from "@/assets/tab-lohn.webp";
+import SaintLogo from "@/assets/tab-saint.webp";
+import DarelaLogo from "@/assets/tab-darela.webp";
+import DarelaArtLogo from "@/assets/tab-darela.webp";
 
 const brands = [
   {

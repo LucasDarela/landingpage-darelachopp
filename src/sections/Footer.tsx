@@ -86,6 +86,7 @@ export const Footer = () => {
           <div className="flex gap-6">
             <a
               href="#"
+              aria-label="X/Twitter"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"
@@ -94,6 +95,7 @@ export const Footer = () => {
             </a>
             <a
               href="https://www.instagram.com/darela.chopp"
+              aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"
@@ -102,6 +104,7 @@ export const Footer = () => {
             </a>
             <a
               href="#"
+              aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"
@@ -110,6 +113,7 @@ export const Footer = () => {
             </a>
             <a
               href="#"
+              aria-label="YouTube"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#008200]"

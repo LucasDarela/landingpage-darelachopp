@@ -63,9 +63,11 @@ export const ChoppCalculator = () => {
         </div>
         <div className="section-heading">
           <form onSubmit={handleCalculate} className="space-y-4">
-            <div>
-              <label className="block font-semibold mb-1">Quantidade de Pessoas:</label>
+                       {/* Quantidade de Pessoas */}
+                       <div>
+              <label htmlFor="people" className="block font-semibold mb-1">Quantidade de Pessoas:</label>
               <input
+                id="people"
                 type="number"
                 value={people}
                 onChange={(e) => setPeople(e.target.value)}
@@ -73,9 +75,12 @@ export const ChoppCalculator = () => {
                 min="0"
               />
             </div>
+
+            {/* Tipo de Evento */}
             <div>
-              <label className="block font-semibold mb-1">Tipo de Evento:</label>
+              <label htmlFor="eventType" className="block font-semibold mb-1">Tipo de Evento:</label>
               <select
+                id="eventType"
                 value={eventType}
                 onChange={(e) => setEventType(e.target.value)}
                 className="w-full border rounded-2xl p-2 focus:outline-none focus:border-[#008200] focus:ring-2 focus:ring-[#008200]/50 hover:border-[#008200] accent-[#008200]"
@@ -87,9 +92,12 @@ export const ChoppCalculator = () => {
                 ))}
               </select>
             </div>
+
+            {/* Tempo de Evento */}
             <div>
-              <label className="block font-semibold mb-1">Tempo de Evento (horas):</label>
+              <label htmlFor="duration" className="block font-semibold mb-1">Tempo de Evento (horas):</label>
               <input
+                id="duration"
                 type="number"
                 value={duration}
                 onChange={(e) => setDuration(e.target.value)}
@@ -97,11 +105,14 @@ export const ChoppCalculator = () => {
                 min="0"
               />
             </div>
+
+            {/* Opções Extras */}
             <div>
               <label className="block font-semibold mb-1">Também vai ter:</label>
               <div className="flex items-center space-x-4 p-2">
-                <label className="flex items-center">
+                <label htmlFor="bebidaQuente" className="flex items-center">
                   <input
+                    id="bebidaQuente"
                     type="checkbox"
                     checked={extras.bebidaQuente}
                     onChange={(e) => setExtras({ ...extras, bebidaQuente: e.target.checked })}
@@ -109,8 +120,9 @@ export const ChoppCalculator = () => {
                   />
                   Bebida Quente
                 </label>
-                <label className="flex items-center">
+                <label htmlFor="drink" className="flex items-center">
                   <input
+                    id="drink"
                     type="checkbox"
                     checked={extras.drink}
                     onChange={(e) => setExtras({ ...extras, drink: e.target.checked })}
@@ -120,13 +132,17 @@ export const ChoppCalculator = () => {
                 </label>
               </div>
             </div>
+
+            {/* Botão de Calcular */}
             <button
               type="submit"
               className="w-full bg-[#008200] text-white py-2 rounded-2xl hover:bg-[#006620] transition"
             >
-              Calcular <i className="fa-solid fa-calculator"></i>
+              Calcular
             </button>
           </form>
+
+          {/* Resultado do Cálculo */}
           {result !== null && (
             <div className="mt-4 p-4 bg-gray-100 rounded">
               <p className="font-semibold">Consumo Médio de Chopp:</p>
@@ -134,6 +150,7 @@ export const ChoppCalculator = () => {
             </div>
           )}
         </div>
+
 
         {/* **Efeito Parallax nas Imagens** */}
         <div className="relative w-full md:w-[850px] lg:w-full sm:hiden ">

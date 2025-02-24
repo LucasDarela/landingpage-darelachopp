@@ -1,7 +1,7 @@
 "use client";
 
 import ArrowIcon from '@/assets/arrow-right.svg';
-import cogImage from '@/assets/cog.png';
+import cogImage from '@/assets/cog.webp';
 import lupulo1Image from '@/assets/lupulo1.png';
 import lupulo2Image from '@/assets/lupulo2.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -75,7 +75,9 @@ export const Hero = () => {
           <div className="relative w-full md:w-[600px] lg:w-1/2 -translate-y-10 md:-translate-y-20 lg:-translate-y-40">
             <motion.img
               src={cogImage.src}
-              alt="cogImage"
+              alt="Caneco de Chopp Image"
+              width={500}
+              height={500}
               className="absolute sm:static z-30"
               animate={{ translateY: [-20, 20] }}
               transition={{ repeat: Infinity, repeatType: 'mirror', duration: 3, ease: 'easeInOut' }}
@@ -83,7 +85,7 @@ export const Hero = () => {
             <motion.img
               src={lupulo1Image.src}
               width={280}
-              height={220}
+              height={280}
               alt="Lúpulo Image"
               className="hidden md:block -top-10 -left-40 md:absolute opacity-60 z-20"
               style={{ translateY: translateY }}
@@ -91,6 +93,7 @@ export const Hero = () => {
             <motion.img
               src={lupulo2Image.src}
               width={500}
+              height={500}
               alt="Lúpulo Image 2"
               className="hidden md:block absolute top-[400px] left-[300px] rotate-[20deg] opacity-60 z-10"
               style={{ rotate: 30, translateY: translateY }}

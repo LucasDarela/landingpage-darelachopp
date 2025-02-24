@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import CriciumaRegiao from '@/assets/regiao-criciuma.png';
-import TubaraoRegiao from '@/assets/regiao-tubarao.png';
+import TubaraoRegiao from '@/assets/regiao-tubarao.webp';
 import LogoWhats from '@/assets/logo-whatsapp.svg';
 
 export const Regiao = () => {
@@ -21,8 +21,8 @@ export const Regiao = () => {
       {/* Tabs */}
       <div className="flex justify-center w-full">
         <ul className="flex w-full max-w-lg mb-4 list-none gap-4" role="tablist">
-          <li className="flex-1">
-            <a
+          <li className="flex-1" role="tab">
+            <button
               className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
                 openTab === 1 ? "bg-[#008200] text-white" : "bg-white shadow-lg text-gray-600"
               }`}
@@ -32,10 +32,10 @@ export const Regiao = () => {
               }}
             >
               Criciúma
-            </a>
+            </button>
           </li>
-          <li className="flex-1">
-            <a
+          <li className="flex-1" role="tab">
+            <button
               className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
                 openTab === 2 ? "bg-[#008200] text-white" : "bg-white shadow-lg text-gray-600"
               }`}
@@ -45,7 +45,7 @@ export const Regiao = () => {
               }}
             >
               Tubarão
-            </a>
+            </button>
           </li>
         </ul>
         </div>
