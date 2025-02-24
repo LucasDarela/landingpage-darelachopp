@@ -16,11 +16,13 @@ const brands = [
     logo: HeinekenLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
         Sabor equilibrado e refrescante, ideal para qualquer ocasião. <br /><br />
         <strong>Tipo:</strong> Pilsen Lager <br />
         <strong>IBU:</strong> 19 <br />
         <strong>Vol:</strong> 5% <br /><br />
         <strong>Sugestão de harmonização:</strong> Combina bem com carnes grelhadas, queijos suaves e petiscos salgados.
+        </p>
       </div>
     ),
   },
@@ -30,11 +32,13 @@ const brands = [
     logo: AmstelLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
+        <p>
         Leve e suave, perfeito para momentos descontraídos. <br /><br />
         <strong>Tipo:</strong> Pilsen Puro Malte<br />
         <strong>IBU:</strong> 18 <br />
         <strong>Vol:</strong> 4,6% <br /><br />
         <strong>Sugestão de harmonização:</strong> Ideal para acompanhar frutos do mar, saladas e pratos leves.
+        </p>
       </div>
     ),
   },
@@ -44,11 +48,13 @@ const brands = [
     logo: LohnLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
+        <p>
         Chopp artesanal de qualidade, com sabor marcante e aroma equilibrado. <br /><br />
         <strong>Tipo:</strong> Pilsen <br />
         <strong>IBU:</strong> 11 <br />
         <strong>Vol:</strong> 4,6% <br /><br />
         <strong>Sugestão de harmonização:</strong> Harmoniza bem com hambúrgueres artesanais, pizzas e carnes assadas.
+        </p>
       </div>
     ),
   },
@@ -58,11 +64,13 @@ const brands = [
     logo: SaintLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
+        <p>
         Opção diferenciada com notas frutadas e um sabor marcante. <br /><br />
         <strong>Tipo:</strong> Pilsen <br />
         <strong>IBU:</strong> 12 <br />
         <strong>Vol:</strong> 5% <br /><br />
         <strong>Sugestão de harmonização:</strong> Excelente com pratos apimentados, carnes vermelhas e queijos maturados.
+        </p>
       </div>
     ),
   },
@@ -72,11 +80,13 @@ const brands = [
     logo: DarelaLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
+        <p>
         Clássico e refrescante, perfeito para os melhores momentos. <br /><br />
         <strong>Tipo:</strong> Pilsen <br />
         <strong>IBU:</strong> 9 <br />
         <strong>Vol:</strong> 4,3% <br /><br />
         <strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, churrascos, pratos leves e aperitivos.
+        </p>
       </div>
     ),
   },
@@ -86,11 +96,13 @@ const brands = [
     logo: DarelaArtLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
+        <p>
         Refrescante e lupulado, perfeito para qualquer momento. <br /><br />
         <strong>Tipo:</strong> Pilsen <br />
         <strong>IBU:</strong> 10 <br />
         <strong>Vol:</strong> 4,7% <br /><br />
         <strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, pizzas, pratos leves e aperitivos.
+        </p>
       </div>
     ),
   },

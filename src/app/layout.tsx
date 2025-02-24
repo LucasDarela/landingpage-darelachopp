@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { CookieConsent } from "@/components/CookieConsent";
+// import { TrackingScripts } from "@/components/TrackingScripts";
 
 const dmSans = Montserrat({ subsets: ["latin"] });
 
@@ -54,10 +56,12 @@ export default function RootLayout({
     <html lang="pt-br" className="relative">
       <head>
         <meta name="robots" content="index, follow" />
+        {/* <TrackingScripts /> */}
         <SpeedInsights />
       </head>
       <body className={clsx(dmSans.className, "overflow-x-hidden antialiased bg-[#0000]")}>
         <main>{children}</main>
+        <CookieConsent />
       </body>
     </html>
   );
