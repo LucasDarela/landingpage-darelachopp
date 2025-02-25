@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import lupulo1Image from "@/assets/lupulo5.png";
-import lupulo2Image from "@/assets/lupulo6.png";
+import lupulo1Image from "@/assets/lupulo5.webp";
+import lupulo2Image from "@/assets/lupulo6.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export const ChoppCalculator = () => {

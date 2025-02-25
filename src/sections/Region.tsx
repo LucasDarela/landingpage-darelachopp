@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import CriciumaRegiao from '@/assets/regiao-criciuma.png';
+import CriciumaRegiao from '@/assets/regiao-criciuma.webp';
 import TubaraoRegiao from '@/assets/regiao-tubarao.webp';
 import LogoWhats from '@/assets/logo-whatsapp.svg';
 

@@ -2,8 +2,8 @@
 
 import ArrowIcon from '@/assets/arrow-right.svg';
 import cogImage from '@/assets/cog.webp';
-import lupulo1Image from '@/assets/lupulo1.png';
-import lupulo2Image from '@/assets/lupulo2.png';
+import lupulo1Image from '@/assets/lupulo1.webp';
+import lupulo2Image from '@/assets/lupulo2.webp';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { WhatsAppModal } from '@/components/WhatsAppModal';

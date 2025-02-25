@@ -4,8 +4,8 @@ import ArrowRight from "@/assets/arrow-right.svg";
 import WhatsAppModal from "@/components/WhatsAppModal";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import lupulo1Image from "@/assets/lupulo7.png";
-import lupulo2Image from "@/assets/lupulo8.png";
+import lupulo1Image from "@/assets/lupulo7.webp";
+import lupulo2Image from "@/assets/lupulo8.webp";
 
 export const CallToAction = () => {
   // Função para scroll suave até a seção "regiao"
