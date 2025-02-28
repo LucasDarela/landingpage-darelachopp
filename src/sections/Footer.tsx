@@ -38,6 +38,13 @@ export const Footer = () => {
 
         {/* Links de navegação com rolagem suave */}
         <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
+        <a
+            href="#sobre"
+            className="hover:text-[#008200]"
+            onClick={(e) => handleScroll(e, "#")}
+          >
+            Início
+          </a>
           <a
             href="#sobre"
             className="hover:text-[#008200]"
