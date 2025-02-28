@@ -1,8 +1,8 @@
 "use client";
 import ArrowIcon from '../assets/arrow-right.svg';
-import Logo from '../assets/logo-bk.png';
+import Logo from '../assets/logo-bk.webp';
 import Image from 'next/image';
-import LogoWhats from '@/assets/logo-whatsapp.png';
+import LogoWhats from '@/assets/logo-whatsapp.webp';
 import Link from 'next/link';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';

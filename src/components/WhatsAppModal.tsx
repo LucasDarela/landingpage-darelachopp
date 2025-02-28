@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
-import LogoWhats from "@/assets/logo-whatsapp.png";
+import LogoWhats from "@/assets/logo-whatsapp.webp";
 
 export const WhatsAppModal = () => {
   const [isOpen, setIsOpen] = useState(false);

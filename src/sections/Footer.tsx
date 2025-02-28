@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import logoWh from '@/assets/logo-wh.png';
+import logoWh from '@/assets/logo-wh.webp';
 import Image from "next/image";
 import SocialX from '@/assets/social-x.svg';
 import SocialInsta from '@/assets/social-insta.svg';

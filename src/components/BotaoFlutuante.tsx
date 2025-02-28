@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import LogoWhats from "@/assets/logo-whatsapp.png";
+import LogoWhats from "@/assets/logo-whatsapp.webp";
 import { FaArrowUp } from "react-icons/fa";
 
 const FloatingButtons = () => {

@@ -1,11 +1,11 @@
 'use client'
 
-import LohnLogo from "@/assets/logo-lohn.png";
-import SaintLogo from "@/assets/logo-saint.png";
-import HeinekenLogo from "@/assets/logo-heineken.png";
-import AmstelLogo from "@/assets/logo-amstel.png";
-import DarelaLogo from "@/assets/logo-darela.png";
-import ColoniaLogo from "@/assets/logo-colonia.png";
+import LohnLogo from "@/assets/logo-lohn.webp";
+import SaintLogo from "@/assets/logo-saint.webp";
+import HeinekenLogo from "@/assets/logo-heineken.webp";
+import AmstelLogo from "@/assets/logo-amstel.webp";
+import DarelaLogo from "@/assets/logo-darela.webp";
+import ColoniaLogo from "@/assets/logo-colonia.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
