@@ -4,6 +4,7 @@ import "./globals.css";
 import clsx from "clsx";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { CookieConsent } from "@/components/CookieConsent";
+import TrackingScript from "@/components/TrackingScript";
 
 const dmSans = Montserrat({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     "chopp Heineken",
     "chopp Amstel",
     "chopp Lohn Bier",
+    "chopp Saint Bier",
     "chope delivery",
     "chopp delivery",
     "aluguel de chope",
@@ -54,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="relative">
       <head>
+      <TrackingScript />
         <meta name="robots" content="index, follow" />
         <SpeedInsights />
       </head>
