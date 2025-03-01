@@ -105,7 +105,6 @@ export const ChoppCalculator = () => {
                 min="0"
               />
             </div>
-
             {/* Opções Extras */}
             <div>
               <span className="block font-semibold mb-1">Também vai ter:</span>
