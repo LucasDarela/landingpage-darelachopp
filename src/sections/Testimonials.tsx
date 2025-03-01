@@ -1,4 +1,5 @@
 "use client";
+
 import avatar1 from "@/assets/avatar-1.webp";
 import avatar2 from "@/assets/avatar-2.webp";
 import avatar3 from "@/assets/avatar-3.webp";

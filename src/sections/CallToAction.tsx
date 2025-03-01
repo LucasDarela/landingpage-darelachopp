@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import ArrowRight from "@/assets/arrow-right.svg";
 import WhatsAppModal from "@/components/WhatsAppModal";

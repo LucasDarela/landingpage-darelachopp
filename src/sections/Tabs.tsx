@@ -16,13 +16,11 @@ const brands = [
     logo: HeinekenLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
-        <p>
-        Sabor equilibrado e refrescante, ideal para qualquer ocasião. <br /><br />
-        <strong>Tipo:</strong> Pilsen Lager <br />
-        <strong>IBU:</strong> 19 <br />
-        <strong>Vol:</strong> 5% <br /><br />
-        <strong>Sugestão de harmonização:</strong> Combina bem com carnes grelhadas, queijos suaves e petiscos salgados.
-        </p>
+        <p>Sabor equilibrado e refrescante, ideal para qualquer ocasião.</p>
+        <p><strong>Tipo:</strong> Pilsen Lager</p>
+        <p><strong>IBU:</strong> 19</p>
+        <p><strong>Vol:</strong> 5%</p>
+        <p><strong>Sugestão de harmonização:</strong> Combina bem com carnes grelhadas, queijos suaves e petiscos salgados.</p>
       </div>
     ),
   },
@@ -32,13 +30,11 @@ const brands = [
     logo: AmstelLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
-        <p>
-        Leve e suave, perfeito para momentos descontraídos. <br /><br />
-        <strong>Tipo:</strong> Pilsen Puro Malte<br />
-        <strong>IBU:</strong> 18 <br />
-        <strong>Vol:</strong> 4,6% <br /><br />
-        <strong>Sugestão de harmonização:</strong> Ideal para acompanhar frutos do mar, saladas e pratos leves.
-        </p>
+        <p>Leve e suave, perfeito para momentos descontraídos.</p>
+        <p><strong>Tipo:</strong> Pilsen Puro Malte</p>
+        <p><strong>IBU:</strong> 18</p>
+        <p><strong>Vol:</strong> 4,6%</p>
+        <p><strong>Sugestão de harmonização:</strong> Ideal para acompanhar frutos do mar, saladas e pratos leves.</p>
       </div>
     ),
   },
@@ -48,13 +44,11 @@ const brands = [
     logo: LohnLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
-        <p>
-        Chopp artesanal de qualidade, com sabor marcante e aroma equilibrado. <br /><br />
-        <strong>Tipo:</strong> Pilsen <br />
-        <strong>IBU:</strong> 11 <br />
-        <strong>Vol:</strong> 4,6% <br /><br />
-        <strong>Sugestão de harmonização:</strong> Harmoniza bem com hambúrgueres artesanais, pizzas e carnes assadas.
-        </p>
+        <p>Chopp artesanal de qualidade, com sabor marcante e aroma equilibrado.</p>
+        <p><strong>Tipo:</strong> Pilsen</p>
+        <p><strong>IBU:</strong> 11</p>
+        <p><strong>Vol:</strong> 4,6%</p>
+        <p><strong>Sugestão de harmonização:</strong> Harmoniza bem com hambúrgueres artesanais, pizzas e carnes assadas.</p>
       </div>
     ),
   },
@@ -64,13 +58,11 @@ const brands = [
     logo: SaintLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
-        <p>
-        Opção diferenciada com notas frutadas e um sabor marcante. <br /><br />
-        <strong>Tipo:</strong> Pilsen <br />
-        <strong>IBU:</strong> 12 <br />
-        <strong>Vol:</strong> 5% <br /><br />
-        <strong>Sugestão de harmonização:</strong> Excelente com pratos apimentados, carnes vermelhas e queijos maturados.
-        </p>
+        <p>Opção diferenciada com notas frutadas e um sabor marcante.</p>
+        <p><strong>Tipo:</strong> Pilsen</p>
+        <p><strong>IBU:</strong> 12</p>
+        <p><strong>Vol:</strong> 5%</p>
+        <p><strong>Sugestão de harmonização:</strong> Excelente com pratos apimentados, carnes vermelhas e queijos maturados.</p>
       </div>
     ),
   },
@@ -80,13 +72,11 @@ const brands = [
     logo: DarelaLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
-        <p>
-        Clássico e refrescante, perfeito para os melhores momentos. <br /><br />
-        <strong>Tipo:</strong> Pilsen <br />
-        <strong>IBU:</strong> 9 <br />
-        <strong>Vol:</strong> 4,3% <br /><br />
-        <strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, churrascos, pratos leves e aperitivos.
-        </p>
+        <p>Clássico e refrescante, perfeito para os melhores momentos.</p>
+        <p><strong>Tipo:</strong> Pilsen</p>
+        <p><strong>IBU:</strong> 9</p>
+        <p><strong>Vol:</strong> 4,3%</p>
+        <p><strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, churrascos, pratos leves e aperitivos.</p>
       </div>
     ),
   },
@@ -96,13 +86,11 @@ const brands = [
     logo: DarelaArtLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px]">
-        <p>
-        Refrescante e lupulado, perfeito para qualquer momento. <br /><br />
-        <strong>Tipo:</strong> Pilsen <br />
-        <strong>IBU:</strong> 10 <br />
-        <strong>Vol:</strong> 4,7% <br /><br />
-        <strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, pizzas, pratos leves e aperitivos.
-        </p>
+        <p>Refrescante e lupulado, perfeito para qualquer momento.</p>
+        <p><strong>Tipo:</strong> Pilsen</p>
+        <p><strong>IBU:</strong> 10</p>
+        <p><strong>Vol:</strong> 4,7%</p>
+        <p><strong>Sugestão de harmonização:</strong> Acompanha bem petiscos, pizzas, pratos leves e aperitivos.</p>
       </div>
     ),
   },
@@ -138,16 +126,14 @@ export const Tabs = () => {
 
         {/* Conteúdo das Tabs */}
         <div className="bg-white shadow-lg rounded-lg p-6">
-          {brands.map((brand) => (
-            <div key={brand.id} className={openTab === brand.id ? "block" : "hidden"}>
-              <div className="flex flex-col items-center">
+          {brands.map((brand) =>
+            openTab === brand.id ? (
+              <div key={brand.id} className="flex flex-col items-center">
                 <Image src={brand.logo} alt={`${brand.name} Logo`} className="w-32 h-auto mb-4" />
-                <p className="text-gray-600 text-center max-w-lg">
-                  {brand.description}
-                </p>
+                <div className="text-gray-600 text-center max-w-lg">{brand.description}</div>
               </div>
-            </div>
-          ))}
+            ) : null
+          )}
         </div>
       </div>
     </section>

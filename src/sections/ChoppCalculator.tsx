@@ -108,7 +108,7 @@ export const ChoppCalculator = () => {
 
             {/* Opções Extras */}
             <div>
-              <label className="block font-semibold mb-1">Também vai ter:</label>
+              <span className="block font-semibold mb-1">Também vai ter:</span>
               <div className="flex items-center space-x-4 p-2">
                 <label htmlFor="bebidaQuente" className="flex items-center">
                   <input

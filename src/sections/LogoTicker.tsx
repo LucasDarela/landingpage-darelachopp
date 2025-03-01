@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import LohnLogo from "@/assets/logo-lohn.webp";
 import SaintLogo from "@/assets/logo-saint.webp";
