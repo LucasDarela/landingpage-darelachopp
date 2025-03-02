@@ -42,7 +42,7 @@ const FloatingButtons = () => {
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          className="fixed bottom-[85px] right-9 bg-gray-700/70 hover:bg-gray-800 text-white p-2 rounded-full shadow-md flex items-center justify-center transition-all duration-300 z-[40]"
+          className="fixed bottom-[85px] right-9 bg-gray-700/70 hover:bg-gray-800 text-white p-2 rounded-full shadow-md flex items-center justify-center transition-all duration-300 z-[40] will-change-transform"
           aria-label="Voltar ao topo"
         >
           <FaArrowUp className="text-sm" />
@@ -57,7 +57,7 @@ const FloatingButtons = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
-            className="bg-white p-6 rounded-2xl shadow-lg w-80 text-center relative"
+            className="bg-white p-6 rounded-2xl shadow-lg w-80 text-center relative will-change-transform"
           >
             <h2 className="text-lg font-semibold mb-4">Entre em Contato</h2>
             <p className="text-gray-600 mb-6">Selecione sua unidade:</p>

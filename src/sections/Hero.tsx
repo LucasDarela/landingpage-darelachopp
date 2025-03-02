@@ -78,7 +78,8 @@ export const Hero = () => {
               alt="Caneco de Chopp Image"
               width={500}
               height={500}
-              className="absolute sm:static z-30"
+              loading="eager"
+              className="absolute sm:static z-30 will-change-transform"
               animate={{ translateY: [-20, 20] }}
               transition={{ repeat: Infinity, repeatType: 'mirror', duration: 3, ease: 'easeInOut' }}
             />
@@ -86,16 +87,18 @@ export const Hero = () => {
               src={lupulo1Image.src}
               width={280}
               height={280}
+              loading="eager"
               alt="Lúpulo Image"
-              className="hidden md:block -top-10 -left-40 md:absolute opacity-60 z-20"
+              className="hidden md:block -top-10 -left-40 md:absolute md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px] opacity-60 z-20 will-change-transform"
               style={{ translateY: translateY }}
             />
             <motion.img
               src={lupulo2Image.src}
               width={500}
               height={500}
+              loading="eager"
               alt="Lúpulo Image 2"
-              className="hidden md:block absolute top-[400px] left-[300px] rotate-[20deg] opacity-60 z-10"
+              className="hidden md:block absolute top-[400px] left-[300px] rotate-[20deg] opacity-60 z-10 will-change-transform"
               style={{ rotate: 30, translateY: translateY }}
             />
           </div>

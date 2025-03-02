@@ -33,7 +33,7 @@ const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
         alt={"lúpulo image"} 
         height={300} 
         width={300} 
-        className="hidden md:block absolute -right-36 bottom-10"
+        className="hidden md:block absolute -right-36 bottom-10 will-change-transform"
         style={{
           translateY,
         }}
@@ -42,7 +42,7 @@ const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
         alt={"lúpulo image 2"} 
         height={263} 
         width={263} 
-        className="hidden md:block absolute bottom-32 -left-36"
+        className="hidden md:block absolute bottom-32 -left-36 will-change-transform"
         style={{
           translateY,
         }}

@@ -58,16 +58,16 @@ export const CallToAction = () => {
             alt="Lúpulo imagem 1"
             height={300} 
             width={300} 
-            className="hidden md:block absolute -right-28 bottom-16 opacity-70"
-            style={{ translateY, }}
+            className="hidden md:block absolute -right-28 bottom-16 opacity-70 will-change-transform"
+            style={{ translateY }}
           />
           <motion.img 
             src={lupulo2Image.src} 
             alt="Lúpulo imagem 2"
             height={263} 
             width={263} 
-            className="hidden md:block absolute bottom-32 -left-28 opacity-70"
-            style={{ translateY, }}
+            className="hidden md:block absolute bottom-32 -left-28 opacity-70 will-change-transform"
+            style={{ translateY }}
           />
         </div>
       </div>

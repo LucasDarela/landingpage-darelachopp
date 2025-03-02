@@ -158,7 +158,7 @@ export const ChoppCalculator = () => {
             alt="Lúpulo Image"
             height={380}
             width={380}
-            className="hidden md:block absolute -right-36 bottom-10"
+            className="hidden md:block absolute -right-36 bottom-10 will-change-transform"
             style={{ y: translateY1 }} // Correção do efeito parallax
           />
           <motion.img
@@ -166,7 +166,7 @@ export const ChoppCalculator = () => {
             alt="Lúpulo Image 2"
             height={263}
             width={263}
-            className="hidden md:block absolute bottom-32 -left-36"
+            className="hidden md:block absolute bottom-32 -left-36 will-change-transform"
             style={{ y: translateY2 }} // Correção do efeito parallax
           />
         </div>

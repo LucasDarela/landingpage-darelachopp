@@ -88,7 +88,7 @@ const TestimonialsColumn = (props: {
         ease: "linear",
         repeatType: "loop",
       }}
-      className="flex flex-col gap-6 pb-6"
+      className="flex flex-col gap-6 pb-6 will-change-transform"
     >
       {[...new Array(2)].fill(0).map((_, outerIndex) => (
         <React.Fragment key={`outer-${outerIndex}`}>
