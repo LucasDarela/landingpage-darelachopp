@@ -133,10 +133,10 @@ export const Header = () => {
             <h2 className="text-lg font-semibold mb-4">Entre em Contato</h2>
             <p className="text-gray-600 mb-6">Selecione sua unidade:</p>
             <div className="flex flex-col gap-4">
-              <a href="https://wa.me/5548999900074" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition">
+              <a href="https://wa.me/5548999900074?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site." target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition">
                 Criciúma <Image src={LogoWhats} alt="WhatsApp" width={20} height={20} />
               </a>
-              <a href="https://wa.me/5548999177835" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition">
+              <a href="https://wa.me/5548999177835?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20site." target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-[#008200] hover:bg-[#006620] transition">
                 Tubarão <Image src={LogoWhats} alt="WhatsApp" width={20} height={20} />
               </a>
             </div>
