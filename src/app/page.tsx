@@ -10,10 +10,12 @@ import { CallToAction } from "@/sections/CallToAction";
 import { Regiao } from "@/sections/Region";
 import BotaoFlutuante from "@/components/BotaoFlutuante";
 import { Faq } from "@/sections/FAQ";
+import AgeVerificationModal from "@/components/AgeVerificationModal";
 
 export default function Home() {
   return (
     <>
+      <AgeVerificationModal />
       <Header />
       <BotaoFlutuante />
       <Hero />
@@ -21,11 +23,11 @@ export default function Home() {
       <Sobre />
       <Tabs />
       <Regiao />
-      <ChoppCalculator/>
-      <Testimonials /> 
+      <ChoppCalculator />
+      <Testimonials />
       <Faq />
       <CallToAction />
-      <Footer/>
+      <Footer />
     </>
   );
 }

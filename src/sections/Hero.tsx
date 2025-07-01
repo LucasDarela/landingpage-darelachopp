@@ -1,18 +1,18 @@
 "use client";
 
-import ArrowIcon from '@/assets/arrow-right.svg';
-import cogImage from '@/assets/cog.webp';
-import lupulo1Image from '@/assets/lupulo1.webp';
-import lupulo2Image from '@/assets/lupulo2.webp';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { WhatsAppModal } from '@/components/WhatsAppModal';
+import ArrowIcon from "@/assets/arrow-right.svg";
+import cogImage from "@/assets/cog.webp";
+import lupulo1Image from "@/assets/lupulo1.webp";
+import lupulo2Image from "@/assets/lupulo2.webp";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { WhatsAppModal } from "@/components/WhatsAppModal";
 
 export const Hero = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
@@ -21,11 +21,12 @@ export const Hero = () => {
     const regionSection = document.getElementById("chopes");
     if (regionSection) {
       const headerOffset = 40;
-      const elementPosition = regionSection.getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        regionSection.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -40,34 +41,38 @@ export const Hero = () => {
       <div
         className="absolute top-0 left-0 pointer-events-none"
         style={{
-          width: '400px',
-          height: '400px',
-          backgroundImage: 'radial-gradient(circle at top left, #008200 0%, transparent 50%)',
+          width: "400px",
+          height: "400px",
+          backgroundImage:
+            "radial-gradient(circle at top left, #008200 0%, transparent 50%)",
           zIndex: -1,
-          top: '-85px', // Adicionando o headerOffset de 80px
-          left: '-80px', 
+          top: "-85px", // Adicionando o headerOffset de 80px
+          left: "-80px",
         }}
       ></div>
 
       <div className="container mx-auto">
-        <div className="md:flex relative z-40">
+        <div className="md:flex relative z-30">
           <div>
             <div className="tag">Entrega em Tempo Recorde</div>
             <h1 className="text-6xl font-bold tracking-tighter mt-8 mb-8 bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text">
               Disk Chopp Delivery
             </h1>
             <p className="text-xl text-[#C28415] tracking-tight mt-6">
-              Leque de produtos de alta qualidade, com chopes premiados e um atendimento sem igual! <br /><br />
-              Darela Chopp Express, há 15 anos no mercado trazendo sabor e alegria para o Sul Catarinense.
+              Leque de produtos de alta qualidade, com chopes premiados e um
+              atendimento sem igual! <br />
+              <br />
+              Darela Chopp Express, há 15 anos no mercado trazendo sabor e
+              alegria para o Sul Catarinense.
             </p>
             {/* Botões */}
             <div className="flex gap-1 sm:pt-4 pt-8 items-center mt-[30px] relative z-50">
               <WhatsAppModal />
-              <button 
+              <button
                 onClick={scrollToMarcas}
                 className="btn btn-text gap-1 inline-flex whitespace-nowrap hover:text-gray hover:scale-105 transition"
               >
-                <span className='tracking-tighter'>Saiba Mais</span>
+                <span className="tracking-tighter">Saiba Mais</span>
                 <ArrowIcon className="h-5 w-5" />
               </button>
             </div>
@@ -81,7 +86,12 @@ export const Hero = () => {
               loading="eager"
               className="absolute sm:static z-30 will-change-transform"
               animate={{ translateY: [-20, 20] }}
-              transition={{ repeat: Infinity, repeatType: 'mirror', duration: 3, ease: 'easeInOut' }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 3,
+                ease: "easeInOut",
+              }}
             />
             <motion.img
               src={lupulo1Image.src}
