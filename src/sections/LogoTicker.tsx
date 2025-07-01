@@ -28,64 +28,64 @@ export const LogoTicker = () => {
           >
             <Image
               src={LohnLogo}
-              alt="Acme Logo"
+              alt="Lohn Bier Logo"
               className="logo-ticker-image"
             />
             <Image
               src={SaintLogo}
-              alt="Quantum Logo"
+              alt="Saint Bier Logo"
               className="logo-ticker-image"
             />
             <Image
               src={HeinekenLogo}
-              alt="Echo Logo"
+              alt="Heineken Logo"
               className="logo-ticker-image"
             />
             <Image
               src={AmstelLogo}
-              alt="Celestial Logo"
+              alt="Amstel Logo"
               className="logo-ticker-image"
             />
             <Image
               src={RoletaRussaLogo}
-              alt="Pulse Logo"
+              alt="Roleta Russa Logo"
               className="logo-ticker-image"
             />
             <Image
               src={ImigracaoLogo}
-              alt="Apex Logo"
+              alt="Imigração Logo"
               className="logo-ticker-image"
             />
 
             {/* Second set of logos for animation */}
             <Image
               src={LohnLogo}
-              alt="Acme Logo"
+              alt="Lohn Bier Logo"
               className="logo-ticker-image"
             />
             <Image
               src={SaintLogo}
-              alt="Quantum Logo"
+              alt="Saint Bier Logo"
               className="logo-ticker-image"
             />
             <Image
               src={HeinekenLogo}
-              alt="Echo Logo"
+              alt="Heineken Logo"
               className="logo-ticker-image"
             />
             <Image
               src={AmstelLogo}
-              alt="Celestial Logo"
+              alt="Amstel Logo"
               className="logo-ticker-image"
             />
             <Image
               src={RoletaRussaLogo}
-              alt="Pulse Logo"
+              alt="Roleta Russa Logo"
               className="logo-ticker-image"
             />
             <Image
               src={ImigracaoLogo}
-              alt="Apex Logo"
+              alt="Imigração Logo"
               className="logo-ticker-image"
             />
           </motion.div>
