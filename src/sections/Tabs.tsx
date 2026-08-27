@@ -156,7 +156,7 @@ const brands = [
       <div className="text-left mx-auto max-w-[400px] text-lg">
         <p>
           Cerveja de tradição alemã, com amargor suave, espuma persistente e
-          excelente "drinkability".
+          excelente &quot;drinkability&quot;.
         </p>
         <p>
           <strong>Tipo:</strong> Pilsen
