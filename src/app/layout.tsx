@@ -2,31 +2,35 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CookieConsent } from "@/components/CookieConsent";
 import TrackingScript from "@/components/TrackingScript";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const dmSans = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Darela Chopp | Chopp Sempre Gelado",
   description:
-    "A melhor distribuidora de chopp de Criciúma e Tubarão! Trabalhamos com Heineken, Amstel, Lohn Bier e muito mais. Barris de chopp de 30L e 50L, aluguel de chopeiras e entrega rápida.",
+    "A melhor distribuidora de chopp de Criciúma e Tubarão! Trabalhamos com Heineken, Brahma, Amstel, Lohn Bier, Saint Bier e muito mais. Barris de chopp de 30L e 50L, aluguel de chopeiras e entrega rápida.",
   keywords: [
     "barril de chopp 50lts",
     "barril de chopp 30lts",
     "barril de chopp",
     "aluguel de chopp",
     "distribuidora de chopp",
-    "chopeira elétrica",
     "chopp para festas",
     "chopp artesanal",
     "entrega de chopp",
     "chopp Heineken",
     "chopp Amstel",
     "chopp Lohn Bier",
+    "chopp Brahma",
+    "chopp Patagonia",
+    "chopp Stella Artois",
     "chopp Saint Bier",
     "chope delivery",
+    "disk chope",
     "chopp delivery",
     "aluguel de chope",
     "barril de chope",
@@ -56,11 +60,17 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="relative">
       <head>
-      <TrackingScript />
+        <TrackingScript />
         <meta name="robots" content="index, follow" />
         <SpeedInsights />
       </head>
-      <body className={clsx(dmSans.className, "overflow-x-hidden antialiased bg-[#0000]")}>
+      <body
+        className={clsx(
+          dmSans.className,
+          "overflow-x-hidden antialiased bg-[#0000]",
+        )}
+      >
+        <LoadingScreen />
         <main>{children}</main>
         <CookieConsent />
       </body>

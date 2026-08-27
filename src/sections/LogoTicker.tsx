@@ -4,8 +4,8 @@ import LohnLogo from "@/assets/logo-lohn.webp";
 import SaintLogo from "@/assets/logo-saint.webp";
 import HeinekenLogo from "@/assets/logo-heineken.webp";
 import AmstelLogo from "@/assets/logo-amstel.webp";
-import RoletaRussaLogo from "@/assets/logo-roletarussa.webp";
-import ImigracaoLogo from "@/assets/logo-imigracao.webp";
+import BrahmaLogo from "@/assets/logo-brahma.webp";
+import StellaLogo from "@/assets/stella.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -47,13 +47,13 @@ export const LogoTicker = () => {
               className="logo-ticker-image"
             />
             <Image
-              src={RoletaRussaLogo}
-              alt="Roleta Russa Logo"
+              src={BrahmaLogo}
+              alt="Brahma Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={ImigracaoLogo}
-              alt="Imigração Logo"
+              src={StellaLogo}
+              alt="Stella Artois Logo"
               className="logo-ticker-image"
             />
 
@@ -79,13 +79,13 @@ export const LogoTicker = () => {
               className="logo-ticker-image"
             />
             <Image
-              src={RoletaRussaLogo}
-              alt="Roleta Russa Logo"
+              src={BrahmaLogo}
+              alt="Brahma Logo"
               className="logo-ticker-image"
             />
             <Image
-              src={ImigracaoLogo}
-              alt="Imigração Logo"
+              src={StellaLogo}
+              alt="Stella Artois Logo"
               className="logo-ticker-image"
             />
           </motion.div>

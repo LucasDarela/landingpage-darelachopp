@@ -39,33 +39,33 @@ export const CookieConsent = () => {
   return (
     <div
       className={clsx(
-        "fixed bottom-0 left-0 w-full z-50 transform transition-transform duration-500 ease-in-out",
+        "fixed bottom-0 left-0 w-full z-50 transform transition-transform duration-500 ease-in-out p-4",
         isOpen ? "translate-y-0" : "translate-y-full"
       )}
     >
-      <div className="bg-white shadow-md border-t border-gray-300 p-6 sm:p-8 flex flex-col sm:flex sm:items-center sm:justify-between gap-4">
+      <div className="bg-white shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-gray-100 p-4 sm:p-5 rounded-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-3 max-w-5xl mx-auto">
         {/* Texto */}
         <div className="flex-1">
-          <h3 className="text-lg font-bold tracking-tighter bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text">
+          <h3 className="text-base font-bold tracking-tighter bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text">
             Política de Cookies
           </h3>
-          <p className="text-gray-700 text-sm">
+          <p className="text-gray-600 text-xs sm:text-sm mt-1 leading-relaxed">
             Usamos cookies para melhorar sua experiência no site. Você pode
-            aceitar ou recusar o uso de cookies a qualquer momento.
+            aceitar ou recusar a qualquer momento.
           </p>
         </div>
 
         {/* Botões */}
-        <div className="flex flex-col md:flex-row gap-2 w-full md:w-auto">
+        <div className="flex flex-row gap-2 w-full md:w-auto mt-1 md:mt-0">
           <button
             onClick={handleAccept}
-            className="w-full md:w-auto bg-[#008200] text-white px-20 py-2 rounded-lg font-medium hover:bg-[#006620] transition"
+            className="flex-1 md:flex-none bg-[#008200] text-white px-5 py-2 rounded-xl text-sm font-medium hover:bg-[#006620] transition"
           >
             Aceitar
           </button>
           <button
             onClick={handleDecline}
-            className="w-full md:w-auto bg-gray-500 text-white px-20 py-2 rounded-lg font-medium hover:bg-gray-600 transition"
+            className="flex-1 md:flex-none bg-gray-100 text-gray-600 px-5 py-2 rounded-xl text-sm font-medium hover:bg-gray-200 transition"
           >
             Recusar
           </button>

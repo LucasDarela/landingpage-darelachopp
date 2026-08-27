@@ -37,20 +37,9 @@ export const Header = () => {
       <header
         className={twMerge(
           "sticky top-0 backdrop-blur-sm z-40 w-full transition-all duration-300",
-          isOpen ? "bg-white shadow-md" : "bg-transparent"
+          isOpen ? "bg-white shadow-md" : "bg-transparent",
         )}
       >
-        {/* Barra superior */}
-        <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
-          <p className="text-white/60 hidden md:block">
-            Venha saborear essa experiência.
-          </p>
-          <div className="inline-flex gap-1 items-center">
-            <p>As melhores marcas pelos menores preços!</p>
-            <ArrowIcon className="w-4 h-4 inline-flex justify-center items-center" />
-          </div>
-        </div>
-
         {/* Navbar principal */}
         <div className="py-5 container">
           <div className="flex items-center justify-between">
@@ -64,42 +53,42 @@ export const Header = () => {
             </Link>
 
             {/* Navbar Desktop */}
-            <nav className="hidden lg:flex gap-6 text-black/60 items-center font-medium">
-              <button
-                onClick={() => scrollToSection("sobre")}
-                className="cursor-pointer"
-              >
-                Sobre
-              </button>
+            <nav className="hidden lg:flex gap-5 text-black/60 items-center">
               <button
                 onClick={() => scrollToSection("chopes")}
-                className="cursor-pointer"
+                className="cursor-pointer text-sm font-semibold hover:text-[#008200] transition"
               >
-                Marcas
-              </button>
-              <button
-                onClick={() => scrollToSection("clients")}
-                className="cursor-pointer"
-              >
-                Clientes
-              </button>
-              <button
-                onClick={() => scrollToSection("regiao")}
-                className="cursor-pointer"
-              >
-                Região
+                Nossos Chopes
               </button>
               <button
                 onClick={() => scrollToSection("choppcalculator")}
-                className="cursor-pointer"
+                className="cursor-pointer text-sm font-semibold hover:text-[#008200] transition"
               >
                 Calculadora
               </button>
               <button
-                onClick={() => scrollToSection("faq")}
-                className="cursor-pointer"
+                onClick={() => scrollToSection("regiao")}
+                className="cursor-pointer text-sm font-semibold hover:text-[#008200] transition"
               >
-                Ajuda
+                Onde Entregamos
+              </button>
+              <button
+                onClick={() => scrollToSection("sobre")}
+                className="cursor-pointer text-sm font-semibold hover:text-[#008200] transition"
+              >
+                Quem Somos
+              </button>
+              <button
+                onClick={() => scrollToSection("clients")}
+                className="cursor-pointer text-sm font-semibold hover:text-[#008200] transition"
+              >
+                Depoimentos
+              </button>
+              <button
+                onClick={() => scrollToSection("faq")}
+                className="cursor-pointer text-sm font-semibold hover:text-[#008200] transition"
+              >
+                Dúvidas
               </button>
               <button
                 onClick={openWhatsAppModal}
@@ -142,47 +131,47 @@ export const Header = () => {
           {/* Navbar Mobile */}
           <nav
             className={twMerge(
-              "lg:hidden absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center gap-6 p-6 transition-all duration-300",
+              "lg:hidden absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center gap-5 p-6 transition-all duration-300",
               isOpen
                 ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-5 pointer-events-none"
+                : "opacity-0 -translate-y-5 pointer-events-none",
             )}
           >
             <button
-              onClick={() => scrollToSection("sobre")}
-              className="cursor-pointer"
-            >
-              Sobre
-            </button>
-            <button
               onClick={() => scrollToSection("chopes")}
-              className="cursor-pointer"
+              className="cursor-pointer text-base font-semibold text-gray-700"
             >
-              Marcas
-            </button>
-            <button
-              onClick={() => scrollToSection("clients")}
-              className="cursor-pointer"
-            >
-              Clientes
-            </button>
-            <button
-              onClick={() => scrollToSection("regiao")}
-              className="cursor-pointer"
-            >
-              Região
+              Nossos Chopes
             </button>
             <button
               onClick={() => scrollToSection("choppcalculator")}
-              className="cursor-pointer"
+              className="cursor-pointer text-base font-semibold text-gray-700"
             >
               Calculadora
             </button>
             <button
-              onClick={() => scrollToSection("faq")}
-              className="cursor-pointer"
+              onClick={() => scrollToSection("regiao")}
+              className="cursor-pointer text-base font-semibold text-gray-700"
             >
-              Ajuda
+              Onde Entregamos
+            </button>
+            <button
+              onClick={() => scrollToSection("sobre")}
+              className="cursor-pointer text-base font-semibold text-gray-700"
+            >
+              Quem Somos
+            </button>
+            <button
+              onClick={() => scrollToSection("clients")}
+              className="cursor-pointer text-base font-semibold text-gray-700"
+            >
+              Depoimentos
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="cursor-pointer text-base font-semibold text-gray-700"
+            >
+              Dúvidas
             </button>
             <button
               onClick={openWhatsAppModal}

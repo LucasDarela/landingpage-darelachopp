@@ -20,10 +20,10 @@ export default function Home() {
       <BotaoFlutuante />
       <Hero />
       <LogoTicker />
-      <Sobre />
       <Tabs />
-      <Regiao />
       <ChoppCalculator />
+      <Regiao />
+      <Sobre />
       <Testimonials />
       <Faq />
       <CallToAction />

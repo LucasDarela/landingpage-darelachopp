@@ -92,24 +92,28 @@ const TestimonialsColumn = (props: {
     >
       {[...new Array(2)].fill(0).map((_, outerIndex) => (
         <React.Fragment key={`outer-${outerIndex}`}>
-          {props.testimonials.map(({ text, imageSrc, name, username }, innerIndex) => (
-            <div className="card" key={`testimonial-${innerIndex}-${name}`}>
-              <div>{text}</div>
-              <div className="flex items-center gap-2 mt-5">
-                <Image
-                  src={imageSrc}
-                  alt={name}
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 rounded-full"
-                />
-                <div className="flex flex-col">
-                  <div className="font-medium tracking-tight leading-5">{name}</div>
-                  <div className="leading-5 tracking-tight">{username}</div>
+          {props.testimonials.map(
+            ({ text, imageSrc, name, username }, innerIndex) => (
+              <div className="card" key={`testimonial-${innerIndex}-${name}`}>
+                <div>{text}</div>
+                <div className="flex items-center gap-2 mt-5">
+                  <Image
+                    src={imageSrc}
+                    alt={name}
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-full"
+                  />
+                  <div className="flex flex-col">
+                    <div className="font-medium tracking-tight leading-5">
+                      {name}
+                    </div>
+                    <div className="leading-5 tracking-tight">{username}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ),
+          )}
         </React.Fragment>
       ))}
     </motion.div>
@@ -121,18 +125,24 @@ export const Testimonials = () => {
     <section className="bg-white my-16" id="clients">
       <div className="container mx-auto">
         <div className="section-heading section-header">
-          <div className="flex justify-center">
-            <div className="tag">Testemunhos</div>
-          </div>
           <h2 className="section-title mt-5">O que nossos clientes dizem</h2>
           <p className="section-description mt-5">
-          Experiências reais de quem já escolheu a qualidade e o sabor do nosso chopp
+            Experiências reais de quem já escolheu a qualidade e o sabor do
+            nosso chopp
           </p>
         </div>
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
-          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+          <TestimonialsColumn
+            testimonials={secondColumn}
+            className="hidden md:block"
+            duration={19}
+          />
+          <TestimonialsColumn
+            testimonials={thirdColumn}
+            className="hidden lg:block"
+            duration={17}
+          />
         </div>
       </div>
     </section>

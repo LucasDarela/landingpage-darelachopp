@@ -46,16 +46,15 @@ export const Hero = () => {
           backgroundImage:
             "radial-gradient(circle at top left, #008200 0%, transparent 50%)",
           zIndex: -1,
-          top: "-85px", // Adicionando o headerOffset de 80px
+          top: "-110px", 
           left: "-80px",
         }}
       ></div>
 
       <div className="container mx-auto">
         <div className="md:flex relative z-30">
-          <div>
-            <div className="tag">Entrega em Tempo Recorde</div>
-            <h1 className="text-6xl font-bold tracking-tighter mt-8 mb-8 bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text">
+          <div className="mt-8 md:mt-16">
+            <h1 className="text-6xl font-bold tracking-tighter mb-8 bg-gradient-to-b from-black to-[#008200] text-transparent bg-clip-text">
               Disk Chopp Delivery
             </h1>
             <p className="text-xl text-[#C28415] tracking-tight mt-6">

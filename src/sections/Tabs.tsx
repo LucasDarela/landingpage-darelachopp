@@ -2,15 +2,20 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import HeinekenLogo from "@/assets/tab-heineken.webp";
-import AmstelLogo from "@/assets/tab-amstel.webp";
-import LohnLogo from "@/assets/tab-lohn.webp";
-import SaintLogo from "@/assets/tab-saint.webp";
-import DarelaLogo from "@/assets/tab-darela.webp";
-import ImigracaoLogo from "@/assets/tab-imigracao.webp";
-import RoletaRussaLogo from "@/assets/tab-roletarussa.webp";
-import IpaLogo from "@/assets/tab-ipa.webp";
-import VinhoLogo from "@/assets/tab-vinho.png";
+import HeinekenLogo from "@/assets/image-tabs/heineken.webp";
+import BrahmaLogo from "@/assets/image-tabs/brahma.webp";
+import LohnLogo from "@/assets/image-tabs/lohn-bier.webp";
+import SaintLogo from "@/assets/image-tabs/saint.webp";
+import DarelaMalteLogo from "@/assets/image-tabs/darela-malte.webp";
+import DarelaTradicionalLogo from "@/assets/image-tabs/darela-tradicional.webp";
+import ZimmermannLogo from "@/assets/image-tabs/zimmermann.webp";
+import NobreLogo from "@/assets/image-tabs/nobre.webp";
+import StellaArtoisLogo from "@/assets/image-tabs/stella-artois.webp";
+import PatagoniaLogo from "@/assets/image-tabs/patagonia.webp";
+import AmstelLogo from "@/assets/image-tabs/amstel.webp";
+import IpaLogo from "@/assets/image-tabs/ipa.webp";
+import IpaPatagoniaLogo from "@/assets/image-tabs/ipa-patagonia.webp";
+import VinhoLogo from "@/assets/image-tabs/vinho.webp";
 
 const brands = [
   {
@@ -19,80 +24,64 @@ const brands = [
     logo: HeinekenLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
-        <p>Sabor equilibrado e refrescante, ideal para qualquer ocasião.</p>
         <p>
-          <strong>Tipo:</strong> Pilsen Lager
+          Cerveja premium com amargor característico, produzida com ingredientes
+          100% naturais e levedura exclusiva Heineken A.
+        </p>
+        <p>
+          <strong>Tipo:</strong> Premium Lager Puro Malte
         </p>
         <p>
           <strong>IBU:</strong> 19
         </p>
         <p>
-          <strong>Vol:</strong> 5%
+          <strong>Vol:</strong> 5,0%
         </p>
         <p>
-          <strong>Sugestão de harmonização:</strong> Combina bem com carnes
-          grelhadas, queijos suaves e petiscos salgados.
+          <strong>Sugestão de harmonização:</strong> Carnes vermelhas,
+          hambúrguer, petiscos fritos e queijos como gouda ou provolone.
         </p>
       </div>
     ),
   },
   {
     id: 2,
-    name: "Amstel",
-    logo: AmstelLogo,
+    name: "Brahma",
+    logo: BrahmaLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
-        <p>Leve e suave, perfeito para momentos descontraídos.</p>
         <p>
-          <strong>Tipo:</strong> Pilsen Puro Malte
+          O autêntico chopp brasileiro, não pasteurizado, mantendo o frescor, a
+          leveza e a cremosidade inconfundíveis.
         </p>
         <p>
-          <strong>IBU:</strong> 18
+          <strong>Tipo:</strong> Chopp Claro
         </p>
         <p>
-          <strong>Vol:</strong> 4,6%
+          <strong>IBU:</strong> 10
         </p>
         <p>
-          <strong>Sugestão de harmonização:</strong> Ideal para acompanhar
-          frutos do mar, saladas e pratos leves.
+          <strong>Vol:</strong> 4,8%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Comida de boteco,
+          churrasco, amendoim, queijos leves e frango a passarinho.
         </p>
       </div>
     ),
   },
   {
     id: 3,
-    name: "Darela",
-    logo: DarelaLogo,
-    description: (
-      <div className="text-left mx-auto max-w-[400px] text-lg">
-        <p>Clássico e refrescante, perfeito para os melhores momentos.</p>
-        <p>
-          <strong>Tipo:</strong> Pilsen
-        </p>
-        <p>
-          <strong>IBU:</strong> 9
-        </p>
-        <p>
-          <strong>Vol:</strong> 4,3%
-        </p>
-        <p>
-          <strong>Sugestão de harmonização:</strong> Acompanha bem petiscos,
-          churrascos, pratos leves e aperitivos.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 4,
     name: "Lohn Bier",
     logo: LohnLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
         <p>
-          Chopp artesanal de qualidade, com sabor marcante e aroma equilibrado.
+          Um chopp artesanal equilibrado, de altíssima refrescância e notas
+          suaves de cereais vindas do puro malte.
         </p>
         <p>
-          <strong>Tipo:</strong> Pilsen
+          <strong>Tipo:</strong> Pilsen Puro Malte
         </p>
         <p>
           <strong>IBU:</strong> 11
@@ -101,44 +90,125 @@ const brands = [
           <strong>Vol:</strong> 4,6%
         </p>
         <p>
-          <strong>Sugestão de harmonização:</strong> Harmoniza bem com
-          hambúrgueres artesanais, pizzas e carnes assadas.
+          <strong>Sugestão de harmonização:</strong> Pizzas, hambúrgueres
+          artesanais, saladas e peixes leves.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 4,
+    name: "Darela Puro Malte",
+    logo: DarelaMalteLogo,
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
+          Nossa estrela da casa! Feito apenas com água, malte, lúpulo e
+          levedura. Encorpado, refrescante e com um colarinho perfeito.
+        </p>
+        <p>
+          <strong>Tipo:</strong> Pilsen Puro Malte
+        </p>
+        <p>
+          <strong>IBU:</strong> 11
+        </p>
+        <p>
+          <strong>Vol:</strong> 4,8%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Churrascos de fim de
+          semana, carnes nobres, petiscos e queijos de média cura.
         </p>
       </div>
     ),
   },
   {
     id: 5,
-    name: "Saint Bier",
-    logo: SaintLogo,
+    name: "Darela Tradicional",
+    logo: DarelaTradicionalLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
-        <p>Opção diferenciada com notas frutadas e um sabor marcante.</p>
+        <p>
+          A versão clássica do nosso chopp. Leve, muito fácil de beber e feito
+          para brindar momentos inesquecíveis.
+        </p>
         <p>
           <strong>Tipo:</strong> Pilsen
         </p>
         <p>
-          <strong>IBU:</strong> 12
+          <strong>IBU:</strong> 9
         </p>
         <p>
-          <strong>Vol:</strong> 5%
+          <strong>Vol:</strong> 4,5%
         </p>
         <p>
-          <strong>Sugestão de harmonização:</strong> Excelente com pratos
-          apimentados, carnes vermelhas e queijos maturados.
+          <strong>Sugestão de harmonização:</strong> Frituras, pasteizinhos,
+          salames, azeitonas e pratos muito leves.
         </p>
       </div>
     ),
   },
   {
     id: 6,
-    name: "Imigração",
-    logo: ImigracaoLogo,
+    name: "Zimmermann",
+    logo: ZimmermannLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
         <p>
-          Chopp refrescante com equilibrio do puro malte, de coloração amarelo
-          ouro, produzido com lúpulos selecionados que realçam um suave amargor.
+          Cerveja de tradição alemã, com amargor suave, espuma persistente e
+          excelente "drinkability".
+        </p>
+        <p>
+          <strong>Tipo:</strong> Pilsen
+        </p>
+        <p>
+          <strong>IBU:</strong> 10
+        </p>
+        <p>
+          <strong>Vol:</strong> 4,5%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Salsichões alemães, joelho
+          de porco (Eisbein), batatas fritas e frutos do mar.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 7,
+    name: "Nobre",
+    logo: NobreLogo,
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
+          Chopp de excelente custo-benefício, sabor refrescante e amargor muito
+          discreto. Uma opção certeira para festas grandes.
+        </p>
+        <p>
+          <strong>Tipo:</strong> Pilsen
+        </p>
+        <p>
+          <strong>IBU:</strong> 10
+        </p>
+        <p>
+          <strong>Vol:</strong> 4,5%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Amendoim, castanhas,
+          churrasco misto e pão com alho.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 8,
+    name: "Saint Bier",
+    logo: SaintLogo,
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
+          Uma verdadeira Pilsen puro malte artesanal. Aromas florais
+          provenientes dos lúpulos alemães e sabor de cereais frescos.
         </p>
         <p>
           <strong>Tipo:</strong> Pilsen Puro Malte
@@ -147,65 +217,167 @@ const brands = [
           <strong>IBU:</strong> 12
         </p>
         <p>
-          <strong>Vol:</strong> 4,8%
+          <strong>Vol:</strong> 5,0%
         </p>
         <p>
-          <strong>Sugestão de harmonização:</strong> Acompanha bem carnes
-          vermelhas, salame e torresmo.
+          <strong>Sugestão de harmonização:</strong> Frutos do mar, aves
+          grelhadas, queijos maturados suaves e massas de molho branco.
         </p>
       </div>
     ),
   },
   {
-    id: 7,
-    name: "Roleta Russa",
-    logo: RoletaRussaLogo,
+    id: 9,
+    name: "Stella Artois",
+    logo: StellaArtoisLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
         <p>
-          Cerveja de coloração amarela dourada, brilhante, de espuma branca com
-          média formação. Aroma e sabor maltado, leve e refrescante, como uma
-          autentica Pilsen puro malte, mas com aquele toque de amargor
-          irreverente Roleta Russa.
+          Com mais de 600 anos de tradição, apresenta sabor refinado, amargor
+          marcante e final seco.
         </p>
         <p>
-          <strong>Tipo:</strong> Pilsen
+          <strong>Tipo:</strong> Premium Lager
+        </p>
+        <p>
+          <strong>IBU:</strong> 24
+        </p>
+        <p>
+          <strong>Vol:</strong> 5,0%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Frutos do mar (como camarão
+          ou lula), peixes brancos e queijos brie ou camembert.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 10,
+    name: "Patagonia",
+    logo: PatagoniaLogo,
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
+          Um chopp Bohemian Pilsener argentino com coloração dourada profunda e
+          lúpulos da Patagônia que trazem aromas florais frescos.
+        </p>
+        <p>
+          <strong>Tipo:</strong> Bohemian Pilsener
         </p>
         <p>
           <strong>IBU:</strong> 18
         </p>
         <p>
-          <strong>Vol:</strong> 4,7%
+          <strong>Vol:</strong> 5,2%
         </p>
         <p>
-          <strong>Sugestão de harmonização:</strong> Churrasco, comida de
-          boteco, frituras, petiscos, salada de maionese e pão de alho.
+          <strong>Sugestão de harmonização:</strong> Empanadas argentinas,
+          carnes assadas (parrilla), linguiças e queijos semiduros.
         </p>
       </div>
     ),
   },
   {
-    id: 8,
+    id: 11,
+    name: "Amstel",
+    logo: AmstelLogo,
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
+          Produzida com a receita europeia, tem sabor suave, coloração dourada e
+          é extremamente refrescante.
+        </p>
+        <p>
+          <strong>Tipo:</strong> Puro Malte Lager
+        </p>
+        <p>
+          <strong>IBU:</strong> 11
+        </p>
+        <p>
+          <strong>Vol:</strong> 4,6%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Churrasco de maminha ou
+          picanha, queijo coalho e aperitivos descontraídos.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 12,
+    name: "Ipa Lohn Bier",
+    logo: IpaLogo,
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
+          American IPA clássica. Aromas cítricos intensos de maracujá e pinho,
+          com amargor alto e limpo.
+        </p>
+        <p>
+          <strong>Tipo:</strong> American IPA
+        </p>
+        <p>
+          <strong>IBU:</strong> 45
+        </p>
+        <p>
+          <strong>Vol:</strong> 6,0%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Hambúrgueres artesanais com
+          queijo cheddar, churrasco gordo (costela) e pratos picantes.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 13,
+    name: "Ipa Patagonia",
+    logo: IpaPatagoniaLogo,
+    description: (
+      <div className="text-left mx-auto max-w-[400px] text-lg">
+        <p>
+          Conhecida como Patagonia 24.7. Uma Session IPA muito aromática
+          (lúpulos patagônicos e americanos), amargor refrescante e corpo leve.
+        </p>
+        <p>
+          <strong>Tipo:</strong> Session IPA
+        </p>
+        <p>
+          <strong>IBU:</strong> 36
+        </p>
+        <p>
+          <strong>Vol:</strong> 4,5%
+        </p>
+        <p>
+          <strong>Sugestão de harmonização:</strong> Pratos apimentados,
+          culinária mexicana, frango frito picante e queijo gorgonzola.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 14,
     name: "Vinho",
     logo: VinhoLogo,
     description: (
       <div className="text-left mx-auto max-w-[400px] text-lg">
         <p>
-          Elaborado com ingredientes nobres, nosso coquetel composto de cerveja
-          pilsen e vinho tinto é uma bebida harmônica e muito agradável.
+          A combinação perfeita entre a leveza e cremosidade do chopp com o
+          sabor adocicado e frutado do vinho tinto de mesa.
         </p>
         <p>
-          <strong>Tipo:</strong> Pilsen
+          <strong>Tipo:</strong> Chopp de Vinho
         </p>
         <p>
-          <strong>IBU:</strong> 49
+          <strong>IBU:</strong> Baixo
         </p>
         <p>
           <strong>Vol:</strong> 5,6%
         </p>
         <p>
-          <strong>Sugestão de harmonização:</strong> Acompanha bem queijos,
-          carnes brancas, pratos leves e aperitivos.
+          <strong>Sugestão de harmonização:</strong> Sobremesas (como chocolate
+          amargo), salames intensos e queijos como gorgonzola ou parmesão.
         </p>
       </div>
     ),
@@ -217,12 +389,12 @@ export const Tabs = () => {
 
   return (
     <section
-      className="py-12 bg-gradient-to-t from-[#FFFFFF] to-[#008200]/50"
+      className="py-12 bg-gradient-to-b from-white to-[#008200]/30"
       id="chopes"
     >
       <div className="container">
         <div className="section-header section-heading text-center">
-          <h2 className="section-title">Nossas Marcas</h2>
+          <h2 className="section-title">Nossos Chopes</h2>
           <p className="section-description">
             Trabalhamos com as melhores marcas para garantir qualidade e sabor
             incomparáveis.
@@ -254,13 +426,13 @@ export const Tabs = () => {
                 <Image
                   src={brand.logo}
                   alt={`${brand.name} Logo`}
-                  className="w-32 h-auto mb-4"
+                  className="h-48 md:h-52 w-auto object-contain mb-6 drop-shadow-sm"
                 />
                 <div className="text-gray-600 text-center max-w-lg">
                   {brand.description}
                 </div>
               </div>
-            ) : null
+            ) : null,
           )}
         </div>
       </div>

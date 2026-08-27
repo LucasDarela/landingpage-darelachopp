@@ -1,18 +1,16 @@
 "use client";
 
 import React from "react";
-import logoWh from '@/assets/logo-wh.webp';
+import logoBk from "@/assets/logo-bk.webp";
 import Image from "next/image";
-import SocialX from '@/assets/social-x.svg';
-import SocialInsta from '@/assets/social-insta.svg';
-import SocialLinkedIn from '@/assets/social-linkedin.svg';
-import SocialYoutube from '@/assets/social-youtube.svg';
+import SocialInsta from "@/assets/social-insta.svg";
+import SocialYoutube from "@/assets/social-youtube.svg";
 
 export const Footer = () => {
   // Função para fazer a rolagem suave até a seção correspondente
   const handleScroll = (
     event: React.MouseEvent<HTMLAnchorElement>,
-    targetId: string
+    targetId: string,
   ) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
@@ -25,107 +23,102 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center z-10">
-      <div className="container mx-auto">
-        <div className="inline-flex relative">
+    <footer className="bg-white text-black text-sm py-8 text-center z-10">
+      <div className="container mx-auto px-4 flex flex-col items-center">
+        <div className="mb-4">
           <Image
-            src={logoWh}
+            src={logoBk}
             alt="Darela Chopp Logomarca"
-            height={40}
-            className="relative"
+            height={32}
+            className="opacity-90 hover:opacity-100 transition-opacity drop-shadow-md"
           />
         </div>
 
-        {/* Links de navegação com rolagem suave */}
-        <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
+        {/* Redes Sociais */}
+        <div className="flex gap-4 mb-6">
           <a
-            href="#sobre"
-            className="hover:text-[#008200]"
-            onClick={(e) => handleScroll(e, "#sobre")}
+            href="https://www.instagram.com/darela.chopp"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[gray] hover:text-[#008200] transition-all hover:scale-110 transform"
           >
-            Sobre
+            <SocialInsta />
           </a>
+          <a
+            href="https://www.youtube.com/@darelachopp"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[gray] hover:text-[#008200] transition-all hover:scale-110 transform"
+          >
+            <SocialYoutube />
+          </a>
+        </div>
+
+        {/* Links de navegação com rolagem suave */}
+        <nav className="hidden md:flex md:flex-wrap justify-center md:gap-x-5 md:gap-y-3 mb-5 text-[13px] font-medium tracking-wide w-full md:max-w-none mx-auto">
           <a
             href="#chopes"
-            className="hover:text-[#008200]"
+            className="text-black hover:text-[#008200] transition-colors"
             onClick={(e) => handleScroll(e, "#chopes")}
           >
-            Marcas
-          </a>
-          <a
-            href="#clients"
-            className="hover:text-[#008200]"
-            onClick={(e) => handleScroll(e, "#clients")}
-          >
-            Clientes
-          </a>
-          <a
-            href="#regiao"
-            className="hover:text-[#008200]"
-            onClick={(e) => handleScroll(e, "#regiao")}
-          >
-            Região
+            Nossos Chopes
           </a>
           <a
             href="#choppcalculator"
-            className="hover:text-[#008200]"
+            className="text-black hover:text-[#008200] transition-colors"
             onClick={(e) => handleScroll(e, "#choppcalculator")}
           >
             Calculadora
           </a>
           <a
+            href="#regiao"
+            className="text-black hover:text-[#008200] transition-colors"
+            onClick={(e) => handleScroll(e, "#regiao")}
+          >
+            Onde Entregamos
+          </a>
+          <a
+            href="#sobre"
+            className="text-black hover:text-[#008200] transition-colors"
+            onClick={(e) => handleScroll(e, "#sobre")}
+          >
+            Quem Somos
+          </a>
+          <a
+            href="#clients"
+            className="text-black hover:text-[#008200] transition-colors"
+            onClick={(e) => handleScroll(e, "#clients")}
+          >
+            Depoimentos
+          </a>
+          <a
             href="#faq"
-            className="hover:text-[#008200]"
+            className="text-black hover:text-[#008200] transition-colors"
             onClick={(e) => handleScroll(e, "#faq")}
           >
-            Ajuda
+            Dúvidas
           </a>
         </nav>
 
-        <div className="flex flex-col items-center gap-6 mt-6">
-          <div className="flex gap-6">
-            <a
-              href="#"
-              aria-label="X/Twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#008200]"
-            >
-              <SocialX className="hover:text-[#008200]" />
-            </a>
-            <a
-              href="https://www.instagram.com/darela.chopp"
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#008200]"
-            >
-              <SocialInsta className="hover:text-[#008200]" />
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#008200]"
-            >
-              <SocialLinkedIn className="hover:text-[#008200]" />
-            </a>
-            <a
-              href="#"
-              aria-label="YouTube"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#008200]"
-            >
-              <SocialYoutube className="hover:text-[#008200]" />
-            </a>
-          </div>
+        <div className="w-16 h-[1px] bg-black/20 mb-4"></div>
 
-          <p className="mt-6">
-            © 2025 Darela Chopp. Todos os direitos reservados.
-          </p>
-        </div>
+        <p className="text-xs text-black/80 mb-1">
+          © {new Date().getFullYear()} Darela Chopp Express. Todos os direitos
+          reservados.
+        </p>
+        <p className="text-[11px] text-black/70 mt-2">
+          Desenvolvido por{" "}
+          <a
+            href="https://loadingtechnology.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black hover:text-[#008200] transition-colors font-medium"
+          >
+            Loading Technology
+          </a>
+        </p>
       </div>
     </footer>
   );

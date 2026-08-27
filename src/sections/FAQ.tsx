@@ -5,42 +5,51 @@ import { motion } from "framer-motion";
 import { FaChevronDown, FaTimes } from "react-icons/fa";
 
 const faqData = [
-    {
-        "question": "Como funciona o aluguel da chopeira?",
-        "answer": "O aluguel inclui a chopeira, cilindro de CO₂ e suporte técnico. Você escolhe o barril e pode retirar na loja ou agendar a entrega."
-      },
-      {
-        "question": "Terei suporte caso aconteça algum problema?",
-        "answer": "Sim! Oferecemos suporte via WhatsApp para ajudá-lo com qualquer dúvida ou problema. Se não for possível resolver remotamente, um técnico irá até o local."
-      },
-      {
-        "question": "O que acontece se faltar chopp no meio da festa?",
-        "answer": "No momento do pedido, sempre avaliamos a quantidade de convidados, o tipo e a duração do evento para evitar que falte chopp. Caso exista essa possibilidade, costumamos deixar um barril em consignação. Se, ainda assim, o chopp acabar, basta entrar em contato com o vendedor para verificar a disponibilidade de entrega imediata."
-      },
-      {
-        "question": "Posso deixar um barril em consignação?",
-        "answer": "Sim! Trabalhamos com consignação de barris. Consulte a disponibilidade da marca e da quantidade desejada com o vendedor no momento do agendamento."
-      },
-      {
-        "question": "Quais são as opções de barris disponíveis?",
-        "answer": "Oferecemos barris de 30L e 50L das melhores marcas, como Heineken, Amstel, Lohn Bier e outras."
-      },
-      {
-        "question": "A entrega do chopp é gratuita?",
-        "answer": "Depende da sua localização! Oferecemos entrega gratuita em Criciúma e Tubarão para pedidos acima de um valor mínimo. Consulte as condições com o vendedor."
-      },
-      {
-        "question": "Preciso devolver os equipamentos depois do evento?",
-        "answer": "Sim! Realizamos a coleta nas segundas e terças-feiras. Nossa equipe vai até o local para recolher os equipamentos. Se você retirou a chopeira em nosso depósito, o barril, a chopeira e o cilindro devem ser devolvidos em até 48 horas após o evento, salvo exceções combinadas previamente."
-      },
-      {
-        "question": "Se sobrar chopp no meu evento, posso levar para casa?",
-        "answer": "Sim! Mas é necessário avisar pelo WhatsApp ao final do evento e informar a localização onde a chopeira ficará."
-      },
-      {
-        "question": "Quais são as formas de pagamento?",
-        "answer": "Aceitamos dinheiro, PIX e cartão. O pagamento no cartão está sujeito à taxa da operadora e pode ser parcelado em até 3 vezes, com parcela mínima de R$ 300,00."
-      },
+  {
+    question: "Como funciona o aluguel da chopeira?",
+    answer:
+      "O aluguel inclui a chopeira, cilindro de CO₂ e suporte técnico. Você escolhe o barril e pode retirar na loja ou agendar a entrega.",
+  },
+  {
+    question: "Terei suporte caso aconteça algum problema?",
+    answer:
+      "Sim! Oferecemos suporte via WhatsApp para ajudá-lo com qualquer dúvida ou problema. Se não for possível resolver remotamente, um técnico irá até o local.",
+  },
+  {
+    question: "O que acontece se faltar chopp no meio da festa?",
+    answer:
+      "No momento do pedido, sempre avaliamos a quantidade de convidados, o tipo e a duração do evento para evitar que falte chopp. Caso exista essa possibilidade, costumamos deixar um barril em consignação. Se, ainda assim, o chopp acabar, basta entrar em contato com o vendedor para verificar a disponibilidade de entrega imediata.",
+  },
+  {
+    question: "Posso deixar um barril em consignação?",
+    answer:
+      "Sim! Trabalhamos com consignação de barris. Consulte a disponibilidade da marca e da quantidade desejada com o vendedor no momento do agendamento.",
+  },
+  {
+    question: "Quais são as opções de barris disponíveis?",
+    answer:
+      "Oferecemos barris de 30L e 50L das melhores marcas, como Heineken, Amstel, Lohn Bier e outras.",
+  },
+  {
+    question: "A entrega do chopp é gratuita?",
+    answer:
+      "Depende da sua localização! Oferecemos entrega gratuita em Criciúma e Tubarão para pedidos acima de um valor mínimo. Consulte as condições com o vendedor.",
+  },
+  {
+    question: "Preciso devolver os equipamentos depois do evento?",
+    answer:
+      "Sim! Realizamos a coleta nas segundas e terças-feiras. Nossa equipe vai até o local para recolher os equipamentos. Se você retirou a chopeira em nosso depósito, o barril, a chopeira e o cilindro devem ser devolvidos em até 48 horas após o evento, salvo exceções combinadas previamente.",
+  },
+  {
+    question: "Se sobrar chopp no meu evento, posso levar para casa?",
+    answer:
+      "Sim! Mas é necessário avisar pelo WhatsApp ao final do evento e informar a localização onde a chopeira ficará.",
+  },
+  {
+    question: "Quais são as formas de pagamento?",
+    answer:
+      "Aceitamos dinheiro, PIX e cartão. O pagamento no cartão está sujeito à taxa da operadora e pode ser parcelado em até 3 vezes, com parcela mínima de R$ 300,00.",
+  },
 ];
 
 export const Faq = () => {
@@ -51,13 +60,16 @@ export const Faq = () => {
   };
 
   return (
-    <section id="faq" className="py-12 mb-6">
+    <section id="faq" className="py-12 bg-gradient-to-b from-white to-[#008200]/30">
       <div className="container">
         <div className="section-heading">
-        <div className="section-header text-center">
-          <h2 className="section-title mb-6">Perguntas Frequentes</h2>
-          <p className="section-description">Tire suas dúvidas sobre nossos serviços e aproveite sua experiência com o melhor chopp</p>
-        </div>
+          <div className="section-header text-center">
+            <h2 className="section-title mb-6">Dúvidas Frequentes</h2>
+            <p className="section-description">
+              Tire suas dúvidas sobre nossos serviços e aproveite sua
+              experiência com o melhor chopp
+            </p>
+          </div>
         </div>
         <div className="space-y-4 max-w-2xl mx-auto">
           {faqData.map((item, index) => (
@@ -92,7 +104,6 @@ export const Faq = () => {
           ))}
         </div>
       </div>
-
     </section>
   );
 };

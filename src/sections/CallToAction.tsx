@@ -13,11 +13,12 @@ export const CallToAction = () => {
     const regionSection = document.getElementById("regiao");
     if (regionSection) {
       const headerOffset = 80;
-      const elementPosition = regionSection.getBoundingClientRect().top + window.scrollY;
+      const elementPosition =
+        regionSection.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -26,23 +27,25 @@ export const CallToAction = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   // Transições para o efeito Parallax
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   return (
-    <section 
-      ref={sectionRef} 
-      className="relative w-full overflow-hidden bg-gradient-to-b from-white to-[#008200] py-24"
+    <section
+      ref={sectionRef}
+      className="relative w-full overflow-hidden bg-gradient-to-b from-[#008200]/30 to-white py-24"
     >
       <div className="container">
-        <h2 className="section-title mb-4 text-center">Entre em contato</h2>
-        <p className="section-description text-center mt-5">Faça seu orçamento</p>
+        <h2 className="section-title mb-4 text-center">Pronto para o melhor chopp?</h2>
+        <p className="section-description text-center mt-5">
+          Faça seu orçamento agora e garanta a alegria do seu evento com a Darela Chopp Express.
+        </p>
         <div className="flex gap-2 mt-10 justify-center">
           <WhatsAppModal />
-          <button 
+          <button
             onClick={scrollToRegion}
             className="sm:hidden md:flex btn btn-text gap-1 inline-flex whitespace-nowrap hover:text-gray hover:scale-105 transition"
           >
@@ -53,19 +56,19 @@ export const CallToAction = () => {
 
         {/* Imagens com efeito Parallax */}
         <div className="relative w-full max-w-[850px] mx-auto">
-          <motion.img 
-            src={lupulo1Image.src} 
+          <motion.img
+            src={lupulo1Image.src}
             alt="Lúpulo imagem 1"
-            height={300} 
-            width={300} 
+            height={300}
+            width={300}
             className="hidden md:block absolute -right-28 bottom-16 opacity-70 will-change-transform"
             style={{ translateY }}
           />
-          <motion.img 
-            src={lupulo2Image.src} 
+          <motion.img
+            src={lupulo2Image.src}
             alt="Lúpulo imagem 2"
-            height={263} 
-            width={263} 
+            height={263}
+            width={263}
             className="hidden md:block absolute bottom-32 -left-28 opacity-70 will-change-transform"
             style={{ translateY }}
           />

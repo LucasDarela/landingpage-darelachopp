@@ -2,69 +2,91 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import CriciumaRegiao from '@/assets/regiao-criciuma.webp';
-import TubaraoRegiao from '@/assets/regiao-tubarao.webp';
-import LogoWhats from '@/assets/logo-whatsapp.svg';
+import CriciumaRegiao from "@/assets/regiao-criciuma.webp";
+import TubaraoRegiao from "@/assets/regiao-tubarao.webp";
+import LogoWhats from "@/assets/logo-whatsapp.svg";
 
 export const Regiao = () => {
   const [openTab, setOpenTab] = useState(1);
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   return (
-    <section className='pt-1' id="regiao">
-    <div className="container mx-auto mb-6 mt-8">
-      <div className="section-header section-heading text-center">
-        <h2 className="section-title">Região de atendimento</h2>
-        <p className="section-description">Selecione a unidade mais próxima de você</p>
-      </div>
-  
-      {/* Tabs */}
-      <div className="flex justify-center w-full">
-        <ul className="flex w-full max-w-lg mb-4 list-none gap-4" role="tablist">
-          <li className="flex-1" role="tab">
-            <button
-              className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
-                openTab === 1 ? "bg-[#008200] text-white" : "bg-white shadow-lg text-gray-600"
-              }`}
-              onClick={e => {
-                e.preventDefault();
-                setOpenTab(1);
-              }}
-            >
-              Criciúma
-            </button>
-          </li>
-          <li className="flex-1" role="tab">
-            <button
-              className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
-                openTab === 2 ? "bg-[#008200] text-white" : "bg-white shadow-lg text-gray-600"
-              }`}
-              onClick={e => {
-                e.preventDefault();
-                setOpenTab(2);
-              }}
-            >
-              Tubarão
-            </button>
-          </li>
-        </ul>
+    <section
+      className="py-12 bg-gradient-to-b from-white to-[#008200]/30"
+      id="regiao"
+    >
+      <div className="container mx-auto">
+        <div className="section-header section-heading text-center">
+          <h2 className="section-title">Onde Entregamos</h2>
+          <p className="section-description">
+            Selecione a unidade mais próxima de você
+          </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center w-full">
+          <ul
+            className="flex w-full max-w-lg mb-8 list-none gap-4"
+            role="tablist"
+          >
+            <li className="flex-1" role="tab">
+              <button
+                className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
+                  openTab === 1
+                    ? "bg-[#008200] text-white"
+                    : "bg-white shadow-lg text-gray-600"
+                }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(1);
+                }}
+              >
+                Criciúma
+              </button>
+            </li>
+            <li className="flex-1" role="tab">
+              <button
+                className={`w-full block text-center text-sm font-bold uppercase px-6 py-3 rounded-lg transition-all ${
+                  openTab === 2
+                    ? "bg-[#008200] text-white"
+                    : "bg-white shadow-lg text-gray-600"
+                }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenTab(2);
+                }}
+              >
+                Tubarão
+              </button>
+            </li>
+          </ul>
         </div>
 
         {/* Conteúdo das tabs */}
         <div className="bg-white shadow-lg rounded-lg p-6">
           {/* Criciúma */}
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${openTab === 1 ? "block" : "hidden"}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${openTab === 1 ? "block" : "hidden"}`}
+          >
             {/* Imagem */}
-            <div className="cursor-pointer w-full max-w-[300px] sm:max-w-full mx-auto md:mx-0" onClick={() => setModalImage(CriciumaRegiao.src)}>
-              <Image src={CriciumaRegiao} alt="Criciúma Região" className="rounded-lg shadow-lg" />
+            <div
+              className="cursor-pointer w-full max-w-[300px] sm:max-w-full mx-auto md:mx-0"
+              onClick={() => setModalImage(CriciumaRegiao.src)}
+            >
+              <Image
+                src={CriciumaRegiao}
+                alt="Criciúma Região"
+                className="rounded-lg shadow-lg"
+              />
             </div>
 
             {/* Descrição */}
             <div className="text-center sm:text-left">
               <h3 className="text-xl font-semibold mb-2">Criciúma e região</h3>
               <p className="text-gray-600 text-lg">
-                Atendemos Criciúma e cidades próximas com chopp gelado, entrega rápida e suporte para eventos.
-                Escolha a melhor opção para sua festa ou bar.
+                Atendemos Criciúma e cidades próximas com chopp gelado, entrega
+                rápida e suporte para eventos. Escolha a melhor opção para sua
+                festa ou bar.
               </p>
               <button className="mt-4">
                 <a
@@ -80,17 +102,27 @@ export const Regiao = () => {
           </div>
 
           {/* Tubarão */}
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${openTab === 2 ? "block" : "hidden"}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${openTab === 2 ? "block" : "hidden"}`}
+          >
             {/* Imagem */}
-            <div className="cursor-pointer w-full max-w-[300px] sm:max-w-full mx-auto md:mx-0" onClick={() => setModalImage(TubaraoRegiao.src)}>
-              <Image src={TubaraoRegiao} alt="Tubarão Região" className="rounded-lg shadow-lg" />
+            <div
+              className="cursor-pointer w-full max-w-[300px] sm:max-w-full mx-auto md:mx-0"
+              onClick={() => setModalImage(TubaraoRegiao.src)}
+            >
+              <Image
+                src={TubaraoRegiao}
+                alt="Tubarão Região"
+                className="rounded-lg shadow-lg"
+              />
             </div>
 
             {/* Descrição */}
             <div className="text-center sm:text-left">
               <h3 className="text-xl font-semibold mb-2">Tubarão e região</h3>
               <p className="text-gray-600 text-lg">
-                Levamos chopp gelado para Tubarão e cidades vizinhas. Atendimento para bares, festas e eventos especiais.
+                Levamos chopp gelado para Tubarão e cidades vizinhas.
+                Atendimento para bares, festas e eventos especiais.
               </p>
               <button className="mt-4">
                 <a
@@ -114,7 +146,13 @@ export const Regiao = () => {
           onClick={() => setModalImage(null)}
         >
           <div className="relative p-4 bg-white rounded-lg shadow-lg">
-            <Image src={modalImage} alt="Mapa da região" width={500} height={400} className="rounded-lg shadow-lg" />
+            <Image
+              src={modalImage}
+              alt="Mapa da região"
+              width={500}
+              height={400}
+              className="rounded-lg shadow-lg"
+            />
             <button
               className="absolute top-2 right-4 text-gray-700 text-3xl font-bold cursor-pointer"
               onClick={() => setModalImage(null)}
